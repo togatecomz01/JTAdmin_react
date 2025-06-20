@@ -1,0 +1,1189 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>JT홈페이지 관리자 개선 · 통합 프로젝트</title>  
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="./public/css/reset.css" />
+	<script type="text/javascript" src="./public/js/jquery.min.js"></script>
+</head>
+<body style="padding:20px;">
+
+<script>
+$(document).ready(function(){
+
+	$("td a").click(function(){
+		var LinkPage = $(this).text();
+		$(this).attr("href",LinkPage);
+	});
+
+	var totalpage = $('table tr td:last-child').length;
+	var Okpage = $('.OK').length;
+	var Nonpage = $('.Non').length;
+	
+
+	$('.Totalpg').text(totalpage + 'Page');
+	$('.Okpg').text(Okpage + 'Page');
+});
+</script>
+
+<style>
+.Del td,
+.Del td a:link,
+.Del td a:visited { color:#ccc; }
+.Del td:nth-last-child(8) { color:#333; }
+</style>
+
+<h1 style="font-szie:16px; font-weight:bold;">JT홈페이지 <span style="line-height:normal; font-size:30px!important; font-weight:bold; color:#04adee;">관리자페이지</span> 개선 · 통합 프로젝트</h1>
+<p> 2021.01.05 ~ 2021.04.22(오픈)
+	<span style="float:right;" class="Totalpg"></span>
+	<span style="float:right; display:inline-block; margin:0 5px;"> / </span>
+	<span style="float:right;" class="Okpg"></span>
+</p>
+<p><br /><a href="../jt/ia.html" target="_blank">바로가기 : JT홈페이지 웹 개선 · 통합 프로젝트</a></p>
+<br/>
+<p><br /><a href="../jt/mobile/ia.html" target="_blank">바로가기 : JT홈페이지 모바일 개선 · 통합 프로젝트</a></p>
+
+
+<!---------------------------------- sample --------------------------------------->
+<table class="Table-Type-01" style="margin-top:50px;">
+	<col style="width:10%;" /><col style="width:10%;" /><col style="width:10%;" />
+	<col style="width:20%;" /><col style="width:5%;" /><col style="width:8%;" />
+	<col style="width:8%;" /><col style="width:*;" />
+	<caption style="">가이드</caption>
+	<tr>
+		<th>1depth</th>
+		<th>2depth</th>
+		<th>URL</th>
+		<th>Public</th>
+		<th>Start</td>
+		<th>End</td>
+		<th>Memo</th>
+	</tr>
+	<tr class="Border-bottom">
+		<td>가이드</td>
+		<td><span></span></td>
+		<td><a href="" target="_blank">./sample_01.html</a></td>
+		<td class="Non"><p></p></td>
+		<td><p>-</p></td>
+		<td><p>-</p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td><span></span></td>
+		<td><span></span></td>
+		<td><a href="" target="_blank">./sample/sample.html</a></td>
+		<td class="Non"><p></p></td>
+		<td><p>-</p></td>
+		<td><p>-</p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td><span></span></td>
+		<td><span>레프트메뉴</span></td>
+		<td><a href="" target="_blank">./sample_03_lnb.html</a></td>
+		<td class="Non"><p></p></td>
+		<td><p>-</p></td>
+		<td><p>-</p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td><span></span></td>
+		<td><span>레이어팝업</span></td>
+		<td><a href="" target="_blank">./popup.html</a></td>
+		<td class="Non"><p></p></td>
+		<td><p>-</p></td>
+		<td><p>-</p></td>
+		<td><span></span></td>
+	</tr>
+</tbody>
+</table>
+<!---------------------------------- sample --------------------------------------->
+
+<!----------------------------------로그인--------------------------------------->
+<table class="Table-Type-01" style="margin-top:50px;">
+	<col style="width:10%;" /><col style="width:10%;" /><col style="width:10%;" />
+	<col style="width:20%;" /><col style="width:5%;" /><col style="width:8%;" />
+	<col style="width:8%;" /><col style="width:*;" />
+	<caption style="">로그인 /login</caption>
+	<tr>
+		<th>1depth</th>
+		<th>2depth</th>
+		<th>URL</th>
+		<th>Public</th>
+		<th>Start</td>
+		<th>End</td>
+		<th>Memo</th>
+	</tr>
+	<tr class="Border-bottom">
+		<td>로그인</td>
+		<td><span></span></td>
+		<td><a href="" target="_blank">./logn.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p>-</p></td>
+		<td><p>-</p></td>
+		<td><span></span></td>
+	</tr>
+</tbody>
+</table>
+<!----------------------------------로그인--------------------------------------->
+
+<!---------------------------------- 메인 --------------------------------------->
+<table class="Table-Type-01" style="margin-top:50px;">
+	<col style="width:10%;" /><col style="width:10%;" /><col style="width:10%;" />
+	<col style="width:20%;" /><col style="width:5%;" /><col style="width:8%;" />
+	<col style="width:8%;" /><col style="width:*;" />
+	<caption style="">관리자메인 /main</caption>
+	<tr>
+		<th>1depth</th>
+		<th>2depth</th>
+		<th>URL</th>
+		<th>Public</th>
+		<th>Start</td>
+		<th>End</td>
+		<th>Memo</th>
+	</tr>
+	<tr class="Border-bottom">
+		<td>관리자메인</td>
+		<td><span></span></td>
+		<td><a href="" target="_blank">./main/main.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p>-</p></td>
+		<td><p>-</p></td>
+		<td><span></span></td>
+	</tr>
+</tbody>
+</table>
+<!---------------------------------- 메인 --------------------------------------->
+
+<!---------------------------------- 계정관리 --------------------------------------->
+<table class="Table-Type-01" style="margin-top:50px;">
+	<col style="width:10%;" /><col style="width:10%;" /><col style="width:10%;" />
+	<col style="width:20%;" /><col style="width:5%;" /><col style="width:8%;" />
+	<col style="width:8%;" /><col style="width:*;" />
+	<caption style="">계정관리 /account</caption>
+	<tr>
+		<th>1depth</th>
+		<th>2depth</th>
+		<th>3depth</th>
+		<th>URL</th>
+		<th>Public</th>
+		<th>Start</td>
+		<th>End</td>
+		<th>Memo</th>
+	</tr>
+	<tr class="Border-bottom">
+		<td>계정관리</td>
+		<td><span>메인관리자</span></td>
+		<td><span>목록</span></td>
+		<td><a href="" target="_blank">./account/account_list.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./account/account_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>부관리자</span></td>
+		<td><span>목록</span></td>
+		<td><a href="" target="_blank">./account/account_sub_list.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>등록</span></td>
+		<td><a href="" target="_blank">./account/account_sub_write.html</a></td>
+		<td class="OK"><p>O</p></td></a></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./account/account_sub_modify.html</a></td>
+		<td class="OK"><p>O</p></td></a></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>게시판</span></td>
+		<td><span>목록</span></td>
+		<td><a href="" target="_blank">./account/notice_list.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>등록</span></td>
+		<td><a href="" target="_blank">./account/notice_write.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./account/notice_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	
+</tbody>
+</table>
+<!---------------------------------- 계정관리 --------------------------------------->
+
+<!---------------------------------- 메인관리 --------------------------------------->
+<table class="Table-Type-01" style="margin-top:50px;">
+	<col style="width:10%;" /><col style="width:10%;" /><col style="width:10%;" />
+	<col style="width:20%;" /><col style="width:5%;" /><col style="width:8%;" />
+	<col style="width:8%;" /><col style="width:*;" />
+	<caption style="">메인관리 /mainmang</caption>
+	<tr>
+		<th>1depth</th>
+		<th>2depth</th>
+		<th>3depth</th>
+		<th>URL</th>
+		<th>Public</th>
+		<th>Start</td>
+		<th>End</td>
+		<th>Memo</th>
+	</tr>
+	<tr class="Border-bottom">
+		<td>메인관리</td>
+		<td><span>팝업관리</span></td>
+		<td><span>목록</span></td>
+		<td><a href="" target="_blank">./mainmang/mainpopup_list.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>등록</span></td>
+		<td><a href="" target="_blank">./mainmang/mainpopup_write.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span>팝업디자인나오면 퍼블필요</span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./mainmang/mainpopup_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span>버튼3개</span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>메인배너관리</span></td>
+		<td><span>목록</span></td>
+		<td><a href="" target="_blank">./mainmang/mainbanner_list.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>등록</span></td>
+		<td><a href="" target="_blank">./mainmang/mainbanner_write.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./mainmang/mainbanner_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span>버튼3개</span></td>
+	</tr>
+</tbody>
+</table>
+<!---------------------------------- 메인관리 --------------------------------------->
+
+<!---------------------------------- 메뉴관리 --------------------------------------->
+<table class="Table-Type-01" style="margin-top:50px;">
+	<col style="width:10%;" /><col style="width:10%;" /><col style="width:10%;" />
+	<col style="width:20%;" /><col style="width:5%;" /><col style="width:8%;" />
+	<col style="width:8%;" /><col style="width:*;" />
+	<caption style="">메뉴관리 /menu</caption>
+	<tr>
+		<th>1depth</th>
+		<th>2depth</th>
+		<th>3depth</th>
+		<th>URL</th>
+		<th>Public</th>
+		<th>Start</td>
+		<th>End</td>
+		<th>Memo</th>
+	</tr>
+	<tr class="Border-bottom">
+		<td>메뉴관리</td>
+		<td><span>1depth메뉴관리</span></td>
+		<td><span></span></td>
+		<td><a href="" target="_blank">./menu/menu_1dep.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span>팝업추가필요</span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>2depth메뉴관리</span></td>
+		<td><span></span></td>
+		<td><a href="" target="_blank">./menu/menu_2dep.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span>팝업추가필요</span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>3depth메뉴관리</span></td>
+		<td><span></span></td>
+		<td><a href="" target="_blank">./menu/menu_3dep.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span>팝업추가필요</span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>4depth메뉴관리</span></td>
+		<td><span></span></td>
+		<td><a href="" target="_blank">./menu/menu_4dep.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span>팝업추가필요</span></td>
+	</tr>
+</tbody>
+</table>
+<!---------------------------------- 메뉴관리 --------------------------------------->
+
+<!---------------------------------- 회사관리 --------------------------------------->
+<table class="Table-Type-01" style="margin-top:50px;">
+	<col style="width:10%;" /><col style="width:10%;" /><col style="width:10%;" />
+	<col style="width:20%;" /><col style="width:5%;" /><col style="width:8%;" />
+	<col style="width:8%;" /><col style="width:*;" />
+	<caption style="">회사관리 /company</caption>
+	<tr>
+		<th>1depth</th>
+		<th>2depth</th>
+		<th>3depth</th>
+		<th>URL</th>
+		<th>Public</th>
+		<th>Start</td>
+		<th>End</td>
+		<th>Memo</th>
+	</tr>
+	<tr class="Border-bottom">
+		<td>회사관리</td>
+		<td><span>공지사항</span></td>
+		<td><span>목록</span></td>
+		<td><a href="" target="_blank">./company/notice_list.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>등록</span></td>
+		<td><a href="" target="_blank">./company/notice_write.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./company/notice_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>입찰정보</span></td>
+		<td><span>목록</span></td>
+		<td><a href="" target="_blank">./company/bid_list.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>등록</span></td>
+		<td><a href="" target="_blank">./company/bid_write.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./company/bid_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>광고홍보,브랜드(CI)</span></td>
+		<td><span>목록</span></td>
+		<td><a href="" target="_blank">./company/ad_ci_list.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>등록</span></td>
+		<td><a href="" target="_blank">./company/ad_ci_write.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./company/ad_ci_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>이벤트</span></td>
+		<td><span>목록</span></td>
+		<td><a href="" target="_blank">./company/event_list.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>등록</span></td>
+		<td><a href="" target="_blank">./company/event_write.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./company/event_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>채용관리</span></td>
+		<td><span>목록</span></td>
+		<td><a href="" target="_blank">./company/recruit_list.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>등록</span></td>
+		<td><a href="" target="_blank">./company/recruit_write.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./company/recruit_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>영업점관리</span></td>
+		<td><span>목록</span></td>
+		<td><a href="" target="_blank">./company/branch_list.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span style="color:royalblue">등록</span></td>
+		<td><a href="" target="_blank" style="color:royalblue">./company/branch_write.html</a></td>
+		<td class="OK"><p style="color:royalblue">O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span style="color:royalblue">영업점 등록기능 추가(2022.02.17 현업 리뷰 반영)</span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./company/branch_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>ESG경영</span></td>
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./company/esg.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>Q&amp;A 관리</span></td>
+		<td><span>목록</span></td>
+		<td><a href="" target="_blank">./company/qna_list.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span>2022.03.21 추가</span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>등록</span></td>
+		<td><a href="" target="_blank">./company/qna_write.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span>2022.03.21 추가</span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./company/qna_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span>2022.03.21 추가</span></td>
+	</tr>
+</tbody>
+</table>
+<!---------------------------------- 회사관리 --------------------------------------->
+
+<!---------------------------------- 금융소비자 --------------------------------------->
+<table class="Table-Type-01" style="margin-top:50px;">
+	<col style="width:10%;" /><col style="width:12%;" /><col style="width:10%;" />
+	<col style="width:20%;" /><col style="width:5%;" /><col style="width:8%;" />
+	<col style="width:8%;" /><col style="width:*;" />
+	<caption style="">금융소비자 /finance</caption>
+	<tr>
+		<th>1depth</th>
+		<th>2depth</th>
+		<th>3depth</th>
+		<th>URL</th>
+		<th>Public</th>
+		<th>Start</td>
+		<th>End</td>
+		<th>Memo</th>
+	</tr>
+	<tr class="Border-bottom">
+		<td>금융소비자</td>
+		<td><span>금융소비자권익보호헌장</span></td>
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./finance/finance_consumer_protect.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>금융소비자보호체계</span></td>
+		<td><span>목록</span></td>
+		<td><a href="" target="_blank">./finance/finance_protect_list.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr> 
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>등록</span></td>
+		<td><a href="" target="_blank">./finance/finance_protect_write.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span>소비자보호 우수사례의 경우에만 등록화면 노출됨</span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./finance/finance_protect_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span style="color:royalblue">금융소비자보호규정</span></td>
+		<td><span style="color:royalblue">목록</span></td>
+		<td><a href="" target="_blank" style="color:royalblue">./finance/finance_consumer_control_rule_list.html</a></td>
+		<td class="OK" style="color:royalblue"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span style="color:royalblue">2022.03.10 현업리뷰 반영</span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span style="color:royalblue">금융소비자보호내부통제기준 수정</span></td>
+		<td><span style="color:royalblue">수정</span></td>
+		<td><a href="" target="_blank" style="color:royalblue">./finance/finance_consumer_control_internal_modify.html</a></td>
+		<td class="OK" style="color:royalblue"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span style="color:royalblue">2022.03.10 현업리뷰 반영</span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span style="color:royalblue">금융소비자보호기준 수정</span></td>
+		<td><span style="color:royalblue">수정</span></td>
+		<td><a href="" target="_blank" style="color:royalblue">./finance/finance_consumer_control_modify.html</a></td>
+		<td class="OK" style="color:royalblue"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span style="color:royalblue">2022.03.10 현업리뷰 반영</span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>금융소비자공시</span></td>
+		<td><span>민원공시목록</span></td>
+		<td><a href="" target="_blank">./finance/complaints_disclosure_list.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>민원공시등록</span></td>
+		<td><a href="" target="_blank">./finance/complaints_disclosure_write.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>민원공시수정</span></td>
+		<td><a href="" target="_blank">./finance/complaints_disclosure_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>실태평가</span></td>
+		<td><a href="" target="_blank">./finance/complaints_disclosure_actual.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span><del>금융소비자민원관리</del></span></td>
+		<td><span><del>목록</del></span></td>
+		<td><a href="" target="_blank"><del>./finance/finance_complaints_list.html</del></a></td>
+		<td class=""><p></p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span>관리자페이지에서 관리하지 않고 as-is와 동일하게 - 추가사항 : 담당자에게 메일발송</span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span><del>수정</del></span></td>
+		<td><a href="" target="_blank"><del>./finance/finance_complaints_modify.html</del></a></td>
+		<td class=""><p></p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>금융정보사이트</span></td>
+		<td><span>목록</span></td>
+		<td><a href="" target="_blank">./finance/finance_site_list.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>등록</span></td>
+		<td><a href="" target="_blank">./finance/finance_site_write.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./finance/finance_site_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span><del>금융소비자권리안내</del></span></td>
+		<td><span><del>수정</del></span></td>
+		<td><a href="" target="_blank"><del>./finance/finance_consumer.html</del></a></td>
+		<td class="OK"><p><del>O</del></p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span>자료열람/청약철회/위법계약/금리인하요구권 통합관리 메뉴로 변경(2022.03.10 현업리뷰 반영)</span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>개인정보보호정책</span></td>
+		<td><span>목록</span></td>
+		<td><a href="" target="_blank">./finance/privacypolicy_list.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>등록</span></td>
+		<td><a href="" target="_blank">./finance/privacypolicy_write.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./finance/privacypolicy_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>채권추심업무안내</span></td>
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./finance/debtcollection_info.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>금융소비자권리안내</span></td>
+		<td><span>목록</span></td>
+		<td><a href="" target="_blank">./finance/finance_consumer_list.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span>2022.03.10 현업리뷰 반영.<br>자료열람요구권/청약철회권안내/위법계약해지권안내/금리인하요구권 통합 관리 페이지</span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>자료열람요구권</span></td>
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./finance/pds_open_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span>2022.03.10 현업리뷰 반영.<br />금융소비자권리안내 메뉴로 이동</span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>청약철회권안내</span></td>
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./finance/sbtn_trtn_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span>2022.03.10 현업리뷰 반영.<br />금융소비자권리안내 메뉴로 이동</span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>위법계약해지권안내</span></td>
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./finance/ill_cntr_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span>2022.03.10 현업리뷰 반영.<br />금융소비자권리안내 메뉴로 이동</span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>금리인하요구권</span></td>
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./finance/rate_cut_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span>2022.03.10 현업리뷰 반영.<br />
+		금융소비자권리안내 메뉴로 이동</span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>적합성/적정성</span></td> 
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./finance/sitby_adqcy_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+</tbody>
+</table>
+<!---------------------------------- 금융소비자 --------------------------------------->
+
+<!---------------------------------- 자료실 --------------------------------------->
+<table class="Table-Type-01" style="margin-top:50px;">
+	<col style="width:10%;" /><col style="width:10%;" /><col style="width:10%;" />
+	<col style="width:20%;" /><col style="width:5%;" /><col style="width:8%;" />
+	<col style="width:8%;" /><col style="width:*;" />
+	<caption style="">자료실 /pds</caption>
+	<tr>
+		<th>1depth</th>
+		<th>2depth</th>
+		<th>3depth</th>
+		<th>URL</th>
+		<th>Public</th>
+		<th>Start</td>
+		<th>End</td>
+		<th>Memo</th>
+	</tr>
+	<tr class="Border-bottom">
+		<td>자료실</td>
+		<td><span>목록</span></td>
+		<td><span></span></td>
+		<td><a href="" target="_blank">./pds/pds_list.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>등록</span></td>
+		<td><span></span></td>
+		<td><a href="" target="_blank">./pds/pds_write.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>수정</span></td>
+		<td><span></span></td>
+		<td><a href="" target="_blank">./pds/pds_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+</tbody>
+</table>
+<!---------------------------------- 자료실 --------------------------------------->
+
+<!---------------------------------- 상품관리 --------------------------------------->
+<table class="Table-Type-01" style="margin-top:50px;">
+	<col style="width:10%;" /><col style="width:10%;" /><col style="width:10%;" />
+	<col style="width:20%;" /><col style="width:5%;" /><col style="width:8%;" />
+	<col style="width:8%;" /><col style="width:*;" />
+	<caption style="">상품관리 /product</caption>
+	<tr>
+		<th>1depth</th>
+		<th>2depth</th>
+		<th>3depth</th>
+		<th>URL</th>
+		<th>Public</th>
+		<th>Start</td>
+		<th>End</td>
+		<th>Memo</th>
+	</tr>
+	<tr class="Border-bottom">
+		<td>상품관리</td>
+		<td><span>대출상품관리</span></td>
+		<td><span>목록</span></td>
+		<td><a href="" target="_blank">./product/loan_list.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>등록</span></td>
+		<td><a href="" target="_blank">./product/loan_write.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./product/loan_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>예적금상품관리</span></td>
+		<td><span>목록</span></td>
+		<td><a href="" target="_blank">./product/dep_list.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>등록</span></td>
+		<td><a href="" target="_blank">./product/dep_write.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span></span></td>
+		<td><span>수정</span></td>
+		<td><a href="" target="_blank">./product/dep_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+</tbody>
+</table>
+<!---------------------------------- 상품관리 --------------------------------------->
+
+<!---------------------------------- 공시 --------------------------------------->
+<table class="Table-Type-01" style="margin-top:50px;">
+	<col style="width:10%;" /><col style="width:10%;" /><col style="width:10%;" />
+	<col style="width:20%;" /><col style="width:5%;" /><col style="width:8%;" />
+	<col style="width:8%;" /><col style="width:*;" />
+	<caption style="">공시 /disclosure</caption>
+	<tr>
+		<th>1depth</th>
+		<th>2depth</th>
+		<th>3depth</th>
+		<th>URL</th>
+		<th>Public</th>
+		<th>Start</td>
+		<th>End</td>
+		<th>Memo</th>
+	</tr>
+	<tr class="Border-bottom">
+		<td>공시</td>
+		<td><span>목록</span></td>
+		<td><span></span></td>
+		<td><a href="" target="_blank">./disclosure/disclosure_list.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>등록</span></td>
+		<td><span></span></td>
+		<td><a href="" target="_blank">./disclosure/disclosure_write.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>수정</span></td>
+		<td><span></span></td>
+		<td><a href="" target="_blank">./disclosure/disclosure_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+</tbody>
+</table>
+<!---------------------------------- 공시 --------------------------------------->
+
+<!---------------------------------- 수수료 --------------------------------------->
+<table class="Table-Type-01" style="margin-top:50px;">
+	<col style="width:10%;" /><col style="width:10%;" /><col style="width:10%;" />
+	<col style="width:20%;" /><col style="width:5%;" /><col style="width:8%;" />
+	<col style="width:8%;" /><col style="width:*;" />
+	<caption style="">수수료 /fees</caption>
+	<tr>
+		<th>1depth</th>
+		<th>2depth</th>
+		<th>3depth</th>
+		<th>URL</th>
+		<th>Public</th>
+		<th>Start</td>
+		<th>End</td>
+		<th>Memo</th>
+	</tr>
+	<tr class="Border-bottom">
+		<td>수수료</td>
+		<td><span>목록</span></td>
+		<td><span></span></td>
+		<td><a href="" target="_blank">./fees/fees_list.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span></span></td>
+	</tr>
+	<tr class="Border-bottom">
+		<td></td>
+		<td><span>수정</span></td>
+		<td><span></span></td>
+		<td><a href="" target="_blank">./fees/fees_modify.html</a></td>
+		<td class="OK"><p>O</p></td>
+		<td><p></p></td>
+		<td><p></p></td>
+		<td><span>textarea 보완해야함.</span></td>
+	</tr>
+</tbody>
+</table>
+<!---------------------------------- 수수료 --------------------------------------->
+
+
+<style>
+/* ia */
+.Table-Type-01 { width:100%; border-spacing:0; /*border-collapse:collapse;*/ font-size:11px; color:#333; border:1px #333 solid; font-weight:normal; }
+.Table-Type-01 tr {  }
+.Table-Type-01 tr th { border-bottom:1px #eee solid; border-right:1px #eee solid; padding:10px 0px; background:linear-gradient(to top, #f1f1f1, #fff 100%); text-align:center; white-space:nowrap; font-size:11px; }
+
+.Table-Type-01 tr th:last-child,
+.Table-Type-01 tr td:last-child { border-right:0px; }
+
+.Table-Type-01 tr:last-child td { border-bottom:0; }
+
+.Table-Type-01 tr td { border-right:1px #eee solid;  border-top:1px #eee dashed; position:relative; line-height:28px; height:38px; font-size:11px; }
+
+.Table-Type-01 tr td p { display:block; text-align:center; width:100%!important; position:absolute; top:center; left:0px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; line-height:28px; transform:translate(0%,-50%); box-sizing:border-box; padding:0 10px; font-size:11px; }
+
+.Table-Type-01 tr td span { display:block; text-align:left; width:100%!important; position:absolute; top:center; left:0px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; line-height:28px; transform:translate(0%,-50%); box-sizing:border-box; padding:0 10px; font-size:11px; }
+
+.Table-Type-01 a,
+.Table-Type-01 a:link { font-size:11px; text-decoration:none; color:#333; padding:0 10px; display:inline-block; }
+
+.Table-Type-01 tr .Align-L { text-align:left!important; }
+.Table-Type-01 tr .Align-R { text-align:right!important; }
+
+.Table-Type-01 tr:hover td { background:#f9f9f9; }
+.Top-Line>td { border-top:1px #ccc solid!important; }
+
+.Border-bottom>td { border-top:1px #999 solid!important; }
+.Border-bottom>td:first-child { text-align:center; }
+
+.Table-Type-01 caption { position:absolute; top:-20px; visibility:unset; display:block; font-size:14px; font-weight:bold; }
+.Border-bottom.bdTG>td:nth-last-child(1), .Border-bottom.bdTG>td:nth-last-child(2), 
+.Border-bottom.bdTG>td:nth-last-child(3), .Border-bottom.bdTG>td:nth-last-child(4), 
+.Border-bottom.bdTG>td:nth-last-child(5), .Border-bottom.bdTG>td:nth-last-child(6)  { border-top:1px #eee solid!important; }
+
+</style>
+
+</body>
+</html>

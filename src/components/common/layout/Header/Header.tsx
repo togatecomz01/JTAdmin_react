@@ -1,5 +1,10 @@
+import styles from "./Header.module.scss";
 function Header() {
-  return <>헤더</>;
+  return (
+    <>
+      <div className={styles.header}>헤더</div>
+    </>
+  );
 }
 
 export default Header;

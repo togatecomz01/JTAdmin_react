@@ -1,0 +1,22 @@
+.searchWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.searchButton {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    
+    padding: 0;
+
+    img {
+        width: 20px;
+        height: 20px;
+        display: block;
+        cursor: pointer;
+    }
+}

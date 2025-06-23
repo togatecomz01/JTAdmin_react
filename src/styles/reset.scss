@@ -1,0 +1,49 @@
+@import './variables.scss';
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    color: $text-primary;
+    background-color: $background-main;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    word-break: keep-all;
+    word-wrap: break-word;
+    -webkit-overflow-scrolling: touch;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    font: inherit;
+}
+
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+textarea {
+    resize: none;
+}

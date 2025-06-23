@@ -1,0 +1,33 @@
+//== Colors ==
+//Theme
+$primary-color: #0051A2;        //기본 테마 색상 (버튼, LNB 배경 등)
+$secondary-color: #0A3F74;      //Active 상태 색상
+
+$disabled-color: #a5b2bf;       //비활성화 상태 색상
+
+//Text
+$text-primary: #252525;         //기본 텍스트 색상
+$text-secondary: #666;          //보조 텍스트 색상 form.scss
+$text-light: #888;              //연한 텍스트 색상
+
+//Background
+$background-main: #F6F7FB;      // 전체 페이지 배경 (기존 $background-light)
+$background-component: #fff;    // 컴포넌트 기본 배경 (input 등)
+$background-disabled: #fafafa;  // 비활성화된 요소 배경
+
+//Border
+$border-primary: #D5D5D5;       // 기본 테두리 색상 (기존 $border-color)
+$border-secondary: #E3E5EB;     // 보조 테두리 색상
+
+//Fonts
+$font-family-base: 'NotoSansKR', sans-serif;
+$font-weight-normal: 400;
+$font-weight-bold: 600;
+
+$font-size-base: 16px; // 이것도 rem으로 바꾸는게 좋을것 같음 1.
+$font-size-large: 18px;
+$font-size-title: 30px;
+
+//Layout
+$layout-width-lnb: 280px;// 이것도 rem으로 바꾸는게 좋을것? 같음 2.
+$border-radius-base: 5px;

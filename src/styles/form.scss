@@ -1,0 +1,48 @@
+@import './variables.scss';
+
+.form-control {
+    display: block;
+    width: 100%;
+    border: 1px solid $border-secondary; 
+    border-radius: $border-radius-base;
+    background-color: $background-component;
+    color: $text-secondary;
+    font-weight: $font-weight-bold;
+    padding: 8px 20px;
+    box-sizing: border-box;
+
+    &:disabled {
+        background-color: $background-disabled;
+    }
+}
+
+input[type="file"].form-control {
+    border: none;
+    padding: 0;
+}
+
+textarea.form-control {
+    padding: 10px;
+    min-height: 120px;
+}
+//------------------------------------------------------------
+.form-group {
+    display: flex; 
+    align-items: center; //테스트 페이지 사이에 있는 것들 폼 구성에는 필요없음 나중에 페이지 합칠 때는 삭제 or table에 라벨 넣기
+    margin-bottom: 1rem;
+}
+
+
+.form-label {
+    flex-shrink: 0; 
+    width: 120px;  
+    padding-right: 20px; 
+    font-weight: $font-weight-bold;
+}
+
+
+.form-input-wrapper {
+    flex-grow: 1; 
+    width: 100%;
+}
+//------------------------------------------------------------

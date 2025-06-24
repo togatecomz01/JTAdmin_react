@@ -1,5 +1,66 @@
 @use "../../../assets/styles/abstracts/variables" as vars;
 
-.table {
+.tableContainer {
+  display: grid;
+  gap: 1rem;
+
   padding: vars.$padding;
+}
+
+.tableWrapper {
+  display: grid;
+  gap: 2rem;
+
+  padding: vars.$padding;
+  background: vars.$white-color;
+  border: vars.$border;
+  box-shadow: 0 5px 5px rgba(54, 54, 54, 0.103);
+  border-radius: 1rem;
+}
+
+.table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-left: vars.$border;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0 5px 5px rgba(54, 54, 54, 0.103);
+
+  th,
+  td {
+    border-top: vars.$border;
+    border-right: vars.$border;
+    padding: 0.75rem;
+    text-align: center;
+  }
+
+  thead {
+    background-color: vars.$bg-color;
+    font-weight: bold;
+
+    tr:first-child {
+      th:first-child {
+        border-top-left-radius: 0.75rem;
+      }
+      th:last-child {
+        border-top-right-radius: 0.75rem;
+      }
+    }
+  }
+
+  tbody {
+    tr:last-child {
+      td:first-child {
+        border-bottom-left-radius: 0.75rem;
+      }
+      td:last-child {
+        border-bottom-right-radius: 0.75rem;
+      }
+    }
+
+    tr:hover {
+      background-color: vars.$bg-color;
+    }
+  }
 }

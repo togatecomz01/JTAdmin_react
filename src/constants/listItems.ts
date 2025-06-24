@@ -60,4 +60,58 @@ export const LIST_ITEMS = [
     department: "전산팀",
     name: "홍길남",
   },
+  {
+    no: "2",
+    id: "jtadmin2",
+    department: "전산팀",
+    name: "홍길남",
+  },
+  {
+    no: "2",
+    id: "jtadmin2",
+    department: "전산팀",
+    name: "홍길남",
+  },
+  {
+    no: "2",
+    id: "jtadmin2",
+    department: "전산팀",
+    name: "홍길남",
+  },
+  {
+    no: "2",
+    id: "jtadmin2",
+    department: "전산팀",
+    name: "홍길남",
+  },
+  {
+    no: "2",
+    id: "jtadmin2",
+    department: "전산팀",
+    name: "홍길남",
+  },
+  {
+    no: "2",
+    id: "jtadmin2",
+    department: "전산팀",
+    name: "홍길남",
+  },
+  {
+    no: "2",
+    id: "jtadmin2",
+    department: "전산팀",
+    name: "홍길남",
+  },
+  {
+    no: "2",
+    id: "jtadmin2",
+    department: "전산팀",
+    name: "홍길남",
+  },
+  {
+    no: "2",
+    id: "jtadmin2",
+    department: "전산팀",
+    name: "홍길북",
+  },
 ];

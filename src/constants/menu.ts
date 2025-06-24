@@ -2,8 +2,11 @@ const MENU = [
   {
     name: "계정관리",
     children: [
-      { name: "메인관리자", path: "/dashboard/list" },
-      { name: "부관리자", path: "/dashboard/roles" },
+      { name: "메인관리자_목록", path: "/" },
+      { name: "메인관리자_수정", path: "/account/modify" },
+      { name: "부관리자_목록", path: "/account/sublist" },
+      { name: "부관리자_등록", path: "/account/subwrite" },
+      { name: "부관리자_수정", path: "/account/submodify" },
     ],
   },
   {

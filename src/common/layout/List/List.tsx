@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./List.module.scss";
 
 function List({
@@ -8,6 +9,14 @@ function List({
   listItems: Record<string, string>[];
 }) {
   const headerKey = headers.map((header) => header.value);
+
+  // 페이지네이션
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+  const totalPages = Math.ceil(listItems.length / itemsPerPage);
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentItems = listItems.slice(startIndex, startIndex + itemsPerPage);
 
   return (
     <div className={styles.listContainer}>
@@ -25,7 +34,7 @@ function List({
             </tr>
           </thead>
           <tbody>
-            {listItems.map((item, index) => (
+            {currentItems.map((item, index) => (
               <tr key={index}>
                 {/* headerKey를 순회하면서 key를 가져옴 */}
                 {headerKey.map((key) => (
@@ -37,6 +46,19 @@ function List({
             ))}
           </tbody>
         </table>
+      </div>
+
+      {/* 페이지네이션 버튼 */}
+      <div className={styles.pagination}>
+        {Array.from({ length: totalPages }).map((_, i) => (
+          <button
+            key={i}
+            className={i + 1 === currentPage ? styles.activePage : ""}
+            onClick={() => setCurrentPage(i + 1)}
+          >
+            {i + 1}
+          </button>
+        ))}
       </div>
     </div>
   );

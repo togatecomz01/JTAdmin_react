@@ -64,3 +64,26 @@
     }
   }
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+
+  button {
+    padding: 0.4rem 0.8rem;
+    background: #eee;
+    border: 1px solid #ccc;
+    cursor: pointer;
+
+    &:hover {
+      background: #ddd;
+    }
+  }
+
+  .activePage {
+    background: #333;
+    color: #fff;
+  }
+}

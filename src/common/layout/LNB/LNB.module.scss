@@ -1,0 +1,76 @@
+@use "../../../assets/styles/abstracts/variables" as vars;
+
+@mixin menu-item {
+  display: grid;
+  padding: 5%;
+  cursor: pointer;
+}
+
+.Lnb {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  background: vars.$primary-color;
+  color: vars.$white-color;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .Logo {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 70%;
+      height: auto;
+      margin: 0 5%;
+    }
+  }
+}
+
+.Menu {
+  display: flex;
+  flex-direction: column;
+
+  .MenuItem {
+    @include menu-item;
+    .MenuTitle {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .SubMenu {
+      display: grid;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+
+      &.SubMenuOpen {
+        max-height: 500px; // 충분히 큰 값으로 설정 (내용에 따라 조정)
+        opacity: 1;
+      }
+    }
+
+    .SubMenuItem {
+      @include menu-item;
+      text-decoration: none;
+      color: vars.$white-color;
+    }
+
+    .arrow {
+      width: 10%;
+      height: auto;
+      transform: rotate(-90deg);
+      transition: all 0.3s ease;
+    }
+
+    .active {
+      transform: rotate(0deg);
+    }
+  }
+}

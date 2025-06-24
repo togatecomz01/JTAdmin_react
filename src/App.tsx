@@ -1,13 +1,7 @@
-import Header from "./common/layout/Header/Header";
-import LNB from "./common/layout/LNB/LNB";
+import Router from "./router/Router";
 
 function App() {
-  return (
-    <>
-      <Header />
-      <LNB />
-    </>
-  );
+  return <Router />;
 }
 
 export default App;

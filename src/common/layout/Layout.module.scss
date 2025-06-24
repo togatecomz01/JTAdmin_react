@@ -1,0 +1,16 @@
+@use "../../assets/styles/abstracts/variables" as vars;
+
+.layout {
+  display: grid;
+  grid-template-columns: vars.$LNB-width 1fr;
+  grid-template-rows: vars.$header-height 1fr;
+  grid-template-areas:
+    "LNB header"
+    "LNB main";
+  height: 100vh;
+}
+
+.main {
+  grid-area: main;
+  background: vars.$bright-color;
+}

@@ -1,18 +1,3 @@
-.searchWrapper {
-    position: relative;
-    width: 100%;
-}
+/* table에 있는 검색 input(text)와 다른
 
-.searchButtonPosition {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-
-    img {
-        width: 20px;
-        height: 20px;
-        display: block;
-        cursor: pointer;
-    }
-}
+search를 여기서 관리 했었는데 분리를 해버려서 이 파일이 필요가 없어짐 */

@@ -1,0 +1,17 @@
+.wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.iconPosition {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+
+    img {
+        width: 20px;
+        height: 20px;
+        display: block;
+    }
+}

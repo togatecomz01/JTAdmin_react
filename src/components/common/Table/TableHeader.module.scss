@@ -1,0 +1,11 @@
+@import '../../../styles/variables.scss';
+
+.tableHeader {
+    th {
+        padding: 12px 15px;
+        text-align: center;
+        font-weight: $font-weight-bold;
+        background-color: $background-main;
+        border-bottom: 2px solid $primary-color; // 헤더 하단은 강조
+    }
+    }

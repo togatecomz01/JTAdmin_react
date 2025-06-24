@@ -1,37 +1,69 @@
 import React from 'react'; /* 나중에 props 가져올 수도 있으니까 일단 냅두기 */
-import btnStyles from '../components/common/Button/Button.module.scss';
+import Button from '../components/common/Button/Button'
+/* import btnStyles from '../components/common/Button/Button.module.scss'; */
 import Input from '../components/common/Input/Input';
 import Checkbox from '../components/common/Checkbox/Checkbox';
 import Textarea from '../components/common/Textarea/Textarea';
+import Radio from '../components/common/Radio/Radio';
+import FileUploader from '../components/common/FileUploader/FileUploader';
+import SearchInput from '../components/common/Searchinput/Searchinput';
+import Table from '../components/common/Table/Table';
+import TableRow from '../components/common/Table/TableRow';
+import TableHeader from '../components/common/Table/TableHeader';
+
 function MainPage() { /* 테스트용 페이지 */
+    const userList = [  ];// 0624 퇴근전 생성 -> 내일 데이터 넣어서 map으로 테이블 1개 구성
+
     return (
         <>
+            <h3>부관리자 등록</h3>
+            <Table>
+                <tbody>
+                    <TableRow label="ID">
+                        <Input type="text" />
+                    </TableRow>
+                    <TableRow label="비밀번호">
+                        <Input type='text'/>
+                    </TableRow>
+                    <TableRow label="상태">
+                        <Input type='text'/>
+                    </TableRow>
+                    <TableRow label="기간">
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                            <Input type="date" />
+                            <span>~</span>
+                            <Input type="date" />
+                        </div>
+                    </TableRow>
+                    
+                </tbody>
+            </Table>
+
             <div style={{ padding: '30px' }}>
                 <h1>버튼 테스트 페이지</h1>
                 <hr style={{ margin: '20px 0' }} />
 
                 <h3>큰 사이즈 버튼</h3>
-                <div style={{ marginBottom: '20px' }}>
-                    <button className={`${btnStyles.base} ${btnStyles.large_first}`}>저장</button>
-                    <button className={`${btnStyles.base} ${btnStyles.large_second}`}style={{ marginLeft: '10px' }}>목록</button>
-                    <button className={`${btnStyles.base} ${btnStyles.large_third}`}style={{ marginLeft: '10px' }}>삭제</button>
+                <div style={{ display: 'flex', gap: '10px', marginBottom: '20px' }}>
+                    <Button variant="primary" size="large">저장</Button>
+                    <Button variant="secondary" size="large">목록</Button>
+                    <Button variant="neutral" size="large">삭제</Button>
                 </div>
 
                 <h3>작은 사이즈 버튼</h3>
-                <div>
-                    <button className={`${btnStyles.base} ${btnStyles.small_first}`}>검색</button>
-                    <button className={`${btnStyles.base} ${btnStyles.small_first}`}style={{ marginLeft: '10px' }}>삭제</button>
+                <div style={{ display: 'flex', gap: '10px' }}>
+                    <Button variant="primary" size="small">검색</Button>
+                    <Button variant="primary" size="small">삭제</Button>
                 </div>
             </div>
 
             <div style={{ padding: '40px', maxWidth: '600px', margin: '40px auto' }}>
                 <h1>폼 요소 예제</h1>
-                
                 <form style={{ marginTop: '30px' }}>
                     <div className="form-group">
                         <label className="form-label" htmlFor="user-id">ID</label>
                         <div className="form-input-wrapper">
-                        <Input type="text" id="user-id"/>
+                            <Input type="text" id="user-id"/>
                         </div>
                     </div>
 
@@ -39,15 +71,18 @@ function MainPage() { /* 테스트용 페이지 */
                     <div className="form-group">
                         <label className="form-label" htmlFor="user-password">비밀번호</label>
                         <div className="form-input-wrapper">
-                        <Input type="password" id="user-password" placeholder="비밀번호를 입력하세요" />
+                            <Input type="password" id="user-password" placeholder="비밀번호를 입력하세요" />
                         </div>
                     </div>
 
-                    {/* search */}
+                    {/* 테이블 내 검색 */}
                     <div className="form-group">
-                        <label className="form-label">통합 검색</label>
-                        <div className="form-input-wrapper">
-                        <Input type="search" />
+                        <label className="form-label">검색</label>
+                        <div className="form-input-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <Input type="text" placeholder="검색어를 입력하세요." />
+                        <Button variant="primary" size="small">
+                            검색
+                        </Button>
                         </div>
                     </div>
 
@@ -68,13 +103,37 @@ function MainPage() { /* 테스트용 페이지 */
                         <label className="form-label" htmlFor="product-quantity">수량</label>
                         <Input type="number" id="product-quantity" placeholder="0" />
                     </div>
+
                     {/* date */}
                     <div className="form-group">
                         <label className="form-label" htmlFor="event-date">이벤트 날짜</label>
                         <Input type="date" id="event-date" />
                     </div>
-                    {/* 여기에 다른 폼 컴포넌트들도 추가 예쩡*/}
-                    
+
+                    {/* radio*/}
+                    <div className="form-group">
+                        <label className="form-label">사용자 유형</label>
+                        <div className="form-input-wrapper" style={{ display: 'flex', gap: '20px' }}>
+                            <Radio name="user-type" label="일반 사용자" defaultChecked /> {/* defaultchecked로 기본 선택 해둠 */}
+                            <Radio name="user-type" label="관리자" />
+                            <Radio name="user-type" label="게스트" />
+                        </div>
+                    </div>
+
+                    <div className="form-group">
+                        <label className="form-label">파일</label>
+                        <div className="form-input-wrapper">
+                            <FileUploader />
+                        </div>
+                    </div>
+
+                    {/* 통합검색(dt에 있는거) */}
+                    <div className="form-group">
+                        <label className="form-label">통합 검색</label>
+                        <div className="form-input-wrapper">
+                            <SearchInput placeholder="검색어를 입력하세요." />
+                        </div>
+                    </div>
                 </form>
             </div>
         </>

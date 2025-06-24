@@ -1,3 +1,31 @@
 import styles from './Button.module.scss';
 
-export default styles;
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+    children: React.ReactNode;
+    variant?: 'primary' | 'secondary' | 'neutral' | 'icon' | 'file';
+    size?: 'small' | 'large' | 'file_size';
+}
+
+const Button = ({
+    children,
+    variant = 'primary', //기본 스타일
+    size,
+    className, 
+    ...rest
+}: ButtonProps) => { //props에 따라 클래스 이름 정하기
+    const buttonClass = [
+        styles.base, //모든 버튼의 기본 스타일
+        styles[variant], //variant에 따른 스타일 추가
+        size ? styles[size] : '', //크기 스타일
+        className,
+        
+    ].filter(Boolean).join(' '); //위에 내용들 중 빈 내용이 있었수도 있음->그것을 빼고 배열에 넣기위해 필터사용함
+
+    return (
+        <button className={buttonClass} {...rest}>
+        {children}
+        </button>
+    );
+};
+
+export default Button;

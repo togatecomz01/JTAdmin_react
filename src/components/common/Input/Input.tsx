@@ -1,6 +1,6 @@
 import styles from './Input.module.scss';
 import SearchIcon from '../img/icon_search.png';
-
+import btnStyles from '../Button/Button.module.scss';
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 }
 
@@ -12,7 +12,7 @@ const Input = ({ type = 'text', ...rest }: InputProps) => {
             <input type="search" className="form-control"
                 {...rest} 
             />
-            <button type="button" className={styles.searchButton}>
+            <button type="button" className={`${btnStyles.base} ${btnStyles.icon_button} ${styles.searchButtonPosition}`}>
                 <img src={SearchIcon} alt="검색" />
             </button>
         </div>

@@ -3,15 +3,11 @@
     width: 100%;
 }
 
-.searchButton {
+.searchButtonPosition {
     position: absolute;
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
-    background: transparent;
-    border: none;
-    
-    padding: 0;
 
     img {
         width: 20px;

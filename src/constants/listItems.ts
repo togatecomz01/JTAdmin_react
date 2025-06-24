@@ -1,38 +1,63 @@
 export const HEADERS = [
   {
-    text: "Name",
+    text: "No",
+    value: "no",
+  },
+  {
+    text: "ID",
+    value: "id",
+  },
+  {
+    text: "부서",
+    value: "department",
+  },
+  {
+    text: "이름",
     value: "name",
-  },
-  {
-    text: "Version",
-    value: "version",
-  },
-  {
-    text: "Launch Date",
-    value: "launch",
   },
 ];
 
 export const LIST_ITEMS = [
   {
-    name: "React",
-    version: "18.2.0",
-    launch: "2013-05-29",
+    no: "1",
+    id: "jtadmin1",
+    department: "고객지원팀",
+    name: "홍길동",
   },
   {
-    name: "Vue",
-    version: "3.2.45",
-    launch: "2014-02",
+    no: "2",
+    id: "jtadmin2",
+    department: "전산팀",
+    name: "홍길남",
   },
   {
-    name: "jQuery",
-    version: "3.3",
-    disabled: true,
-    launch: "2006-08-26",
+    no: "2",
+    id: "jtadmin2",
+    department: "전산팀",
+    name: "홍길남",
   },
   {
-    name: "Svelte",
-    version: "3.53.1",
-    launch: "2016-11-26",
+    no: "2",
+    id: "jtadmin2",
+    department: "전산팀",
+    name: "홍길남",
+  },
+  {
+    no: "2",
+    id: "jtadmin2",
+    department: "전산팀",
+    name: "홍길남",
+  },
+  {
+    no: "2",
+    id: "jtadmin2",
+    department: "전산팀",
+    name: "홍길남",
+  },
+  {
+    no: "2",
+    id: "jtadmin2",
+    department: "전산팀",
+    name: "홍길남",
   },
 ];

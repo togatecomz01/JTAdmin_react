@@ -1,8 +1,13 @@
-import { HEADERS, LIST_ITEMS } from "../../../constants/listItems";
 import styles from "./List.module.scss";
 
-function List() {
-  const headerKey = HEADERS.map((header) => header.value);
+function List({
+  headers,
+  listItems,
+}: {
+  headers: { text: string; value: string }[];
+  listItems: Record<string, string>[];
+}) {
+  const headerKey = headers.map((header) => header.value);
 
   return (
     <div className={styles.listContainer}>
@@ -12,7 +17,7 @@ function List() {
         <table className={styles.list}>
           <thead>
             <tr>
-              {HEADERS.map((header) => (
+              {headers.map((header) => (
                 <th key={header.text}>
                   {header.text} {/* 컬럼명 바인딩 */}
                 </th>
@@ -20,7 +25,7 @@ function List() {
             </tr>
           </thead>
           <tbody>
-            {LIST_ITEMS.map((item, index) => (
+            {listItems.map((item, index) => (
               <tr key={index}>
                 {/* headerKey를 순회하면서 key를 가져옴 */}
                 {headerKey.map((key) => (

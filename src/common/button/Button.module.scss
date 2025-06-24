@@ -1,0 +1,10 @@
+@use "../../assets/styles/abstracts/variables" as vars;
+
+.button {
+  width: 100px;
+  height: 100%;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: vars.$primary-color;
+  color: white;
+}

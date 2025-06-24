@@ -2,7 +2,7 @@ import styles from "./Header.module.scss";
 import userIcon from "../../../assets/images/user-icon.svg";
 // import { Link } from "react-router-dom";
 
-function Header() {
+function Header({ name }: { name: string }) {
   return (
     <div className={styles.header}>
       {/* <Link to="/"> */}
@@ -12,7 +12,7 @@ function Header() {
         </div>
         {/* </Link> */}
         <div>
-          <strong>홍길동</strong> 님
+          <strong>{name}</strong> 님
         </div>
       </div>
     </div>

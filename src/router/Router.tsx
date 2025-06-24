@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import List from "../common/layout/List/List";
 import Layout from "../common/layout/Layout";
+import List from "../common/layout/List/List";
+// import Table from "../common/layout/Table/Table";
 
 const Router = () => {
   return (

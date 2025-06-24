@@ -11,7 +11,9 @@ function Header() {
           <img src={userIcon} alt="User Icon" />
         </div>
         {/* </Link> */}
-        <strong>홍길동</strong> 님
+        <div>
+          <strong>홍길동</strong> 님
+        </div>
       </div>
     </div>
   );

@@ -11,9 +11,9 @@ const Popup = () => {
   return (
     <div className={styles.popupWrapper} onClick={onBackgroundClick}>
       <div className={styles.popup} onClick={onPopupClick}>
-        <div className={styles.text}>{text}</div>
+        <div className={styles.text}>{text.message}</div>
         <button className={styles.button} onClick={closePopup}>
-          취소
+          {text.button}
         </button>
       </div>
     </div>

@@ -1,5 +1,4 @@
-export const TABLE_EXAMPLE = {
-  text: { title: "메인관리자", subTitle: "관리자 설정" },
+export const ACCOUNT_TABLE_EXAMPLE = {
   headers: [
     {
       text: "ID",
@@ -28,13 +27,6 @@ export const TABLE_EXAMPLE = {
     {
       text: "이메일",
       value: "email",
-    },
-  ],
-  tableItems: [
-    {
-      modifier: "홍길동",
-      date: "2025.06.25",
-      title: "textInput",
     },
   ],
 };

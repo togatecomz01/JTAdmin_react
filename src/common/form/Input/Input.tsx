@@ -1,6 +1,6 @@
 import styles from "./Input.module.scss";
 type InputProps = {
-  type: "text" | "date" | "content";
+  type: "text" | "password" | "number" | "date" | "content";
   placeholder?: string;
   value?: string;
   onChange?: (

@@ -1,4 +1,5 @@
 @use "../../../assets/styles/abstracts/variables" as vars;
+
 @mixin input {
   width: 90%;
   height: auto;
@@ -6,9 +7,11 @@
   padding: 0.3%;
   border: vars.$border;
 }
+
 .textInput {
   @include input;
 }
+
 .contentInput {
   @include input;
 }

@@ -48,19 +48,21 @@ function List({
             ))}
           </tbody>
         </table>
-      </div>
 
-      {/* 페이지네이션 버튼 */}
-      <div className={styles.pagination}>
-        {Array.from({ length: totalPages }).map((_, i) => (
-          <button
-            key={i}
-            className={i + 1 === currentPage ? styles.activePage : ""}
-            onClick={() => setCurrentPage(i + 1)}
-          >
-            {i + 1}
-          </button>
-        ))}
+        {/* 페이지네이션 버튼 */}
+        {totalPages > itemsPerPage && (
+          <div className={styles.pagination}>
+            {Array.from({ length: totalPages }).map((_, i) => (
+              <button
+                key={i}
+                className={i + 1 === currentPage ? styles.activePage : ""}
+                onClick={() => setCurrentPage(i + 1)}
+              >
+                {i + 1}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

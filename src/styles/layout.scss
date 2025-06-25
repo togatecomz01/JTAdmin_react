@@ -1,1 +1,22 @@
 /* 헤더, lnb, list, table, alert, popup 등 레이아웃전ㅇ용 */
+@import '../styles/variables.scss';
+
+.layoutContainer {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.contentWrapper {
+    flex-grow: 1; //LNB를 제외한 나머지 공간을 모두 차지
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.mainContent {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: $background-main;
+    overflow-y: auto; //내용이 길어지면 lnb를 제외하고 스크롤
+}

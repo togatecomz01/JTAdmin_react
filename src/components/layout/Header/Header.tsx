@@ -1,0 +1,20 @@
+import styles from './Header.module.scss';
+import React from 'react';
+import UserIcon from '../../common/img/user_icon.png';
+
+const Header = () => {
+    return (
+        <header className={styles.header}>
+        <div className={styles.userInfo}>
+            <a href="#" className={styles.avatar}>
+            <img src={UserIcon} alt="유저 이미지" />
+            </a>
+            <p>
+            <span>홍길동</span>님
+            </p>
+        </div>
+        </header>
+    );
+};
+
+export default Header;

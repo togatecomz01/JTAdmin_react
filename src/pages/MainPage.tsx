@@ -1,6 +1,5 @@
 import React from 'react'; /* 나중에 props 가져올 수도 있으니까 일단 냅두기 */
 import Button from '../components/common/Button/Button'
-/* import btnStyles from '../components/common/Button/Button.module.scss'; */
 import Input from '../components/common/Input/Input';
 import Checkbox from '../components/common/Checkbox/Checkbox';
 import Textarea from '../components/common/Textarea/Textarea';
@@ -10,32 +9,40 @@ import SearchInput from '../components/common/Searchinput/Searchinput';
 import Table from '../components/common/Table/Table';
 import TableRow from '../components/common/Table/TableRow';
 import TableHeader from '../components/common/Table/TableHeader';
-
+import TableDataItem from '../components/common/Table/TableDataItem';
+import { userList, userListColumns } from '../components/common/Table/TableData';
 function MainPage() { /* 테스트용 페이지 */
-    const userList = [  ];// 0624 퇴근전 생성 -> 내일 데이터 넣어서 map으로 테이블 1개 구성
-
     return (
         <>
             <h3>부관리자 등록</h3>
             <Table>
                 <tbody>
-                    <TableRow label="ID">
-                        <Input type="text" />
-                    </TableRow>
-                    <TableRow label="비밀번호">
-                        <Input type='text'/>
-                    </TableRow>
-                    <TableRow label="상태">
-                        <Input type='text'/>
-                    </TableRow>
-                    <TableRow label="기간">
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                            <Input type="date" />
-                            <span>~</span>
-                            <Input type="date" />
-                        </div>
-                    </TableRow>
-                    
+                <TableRow label="ID">
+                    <Input type="text" />
+                </TableRow>
+                <TableRow label="비밀번호">
+                    <Input type='password' />
+                </TableRow>
+                <TableRow label="상태">
+                    <Input type='text' />
+                </TableRow>
+                <TableRow label="기간">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                        <Input type="date" />
+                        <span>~</span>
+                        <Input type="date" />
+                    </div>
+                </TableRow>
+                </tbody>
+            </Table>
+
+            <h3 style={{ marginTop: '40px' }}>사용자 목록</h3>
+            <Table>
+                <TableHeader columns={userListColumns} />
+                <tbody>
+                    {userList.map((user) => (
+                        <TableDataItem key={user.no} item={user} />
+                    ))}
                 </tbody>
             </Table>
 

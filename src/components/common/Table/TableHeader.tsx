@@ -18,4 +18,4 @@ const TableHeader = ({ columns }: TableHeaderProps) => {
     );
 };
 
-export default TableHeader;
+export default TableHeader; /* 세로 기준 테이블 - 첫줄에 header가 있고 그 밑으로는 데이터를 넣는 테이블 ex) userdata*/

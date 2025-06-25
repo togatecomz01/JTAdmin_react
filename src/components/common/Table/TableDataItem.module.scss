@@ -1,0 +1,21 @@
+/* src/components/common/Table/TableDataItem.module.scss */
+@import '../../../styles/variables.scss';
+
+.dataRow {
+    // 데이터 행 전체에 대한 스타일 (예: hover 효과)
+    &:hover {
+        background-color: lighten($background-main, 2%);
+    }
+}
+
+// 모든 셀의 공통 스타일
+.dataRow td {
+    padding: 12px 15px;
+    border-bottom: 1px solid $border-primary;
+    text-align: center;
+}
+
+// 가운데 정렬이 필요한 셀을 위한 유틸리티 클래스
+.cellCenter {
+    text-align: center;
+}

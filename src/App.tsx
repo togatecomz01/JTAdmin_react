@@ -18,12 +18,15 @@ export default App */
 /* import './styles/reset.scss';
 import './styles/form.scss'; */
 import MainPage from './pages/MainPage';
-
+import Layout from './components/layout/Layout';
+import './styles/layout.scss';
+import LayoutTest from './pages/LayoutTest'; 
 function App() {
   return (
-    <div className="App">
-      <MainPage />
-    </div>
+    <Layout>
+      {/* <MainPage /> */}
+      <LayoutTest/>
+    </Layout>
   );
 }
 

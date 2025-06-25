@@ -1,0 +1,97 @@
+@import '../../../styles/variables.scss';
+
+.lnb {
+    display: flex;
+    flex-direction: column;
+    width: $layout-width-lnb;
+    height: 100%;
+    background-color: $primary-color;
+}
+
+.logo {
+    flex-shrink: 0;
+    height: 70px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+    margin-top: -7px;
+    margin-bottom: 45px;
+    a {
+        display: inline-block;
+    }
+}
+.logo img {
+    width: 195px; 
+    height: auto; 
+    vertical-align: middle;
+}
+
+.menuList {
+    flex-grow: 1; 
+    overflow-y: auto; 
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    > li {
+        .menuButton {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 45px;
+            cursor: pointer;
+            position: relative;
+            font-size: $font-size-large;
+            font-weight: $font-weight-bold;
+            color: white;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .arrowIcon {
+            transition: transform 0.3s ease-in-out;
+            transform: rotate(270deg);
+        }
+    
+        .subMenu {
+            max-height: 0;
+            overflow: hidden;
+            background-color: $secondary-color;
+            padding: 0 55px;
+            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+
+            a {
+                display: block;
+                padding: 15px 0;
+                color: #B2CDE9;
+                text-decoration: none;
+                &:hover { color: white; }
+            }
+        }
+
+        //li에 active
+        &.active {
+            .menuButton {
+                background-color: $secondary-color;
+                
+                &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 5px;
+                height: 100%;
+                background-color: white;
+                }
+            }
+
+            .arrowIcon {
+                transform: rotate(360deg);
+            }
+            
+            .subMenu {
+                max-height: 500px;
+                padding: 10px 55px;
+            }
+        }
+    }
+}

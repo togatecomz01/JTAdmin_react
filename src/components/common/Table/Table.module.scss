@@ -1,7 +1,8 @@
 @import '../../../styles/variables.scss';
 
 .tableWrapper {
-    width: 30%; // 바꿔주기
+    margin-top: 20px;
+    width: 100%; // 바꿔주기
     border: 1px solid $border-primary;
     border-radius: $border-radius-base;
     background-color: $background-component;

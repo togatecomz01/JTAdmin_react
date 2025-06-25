@@ -9,10 +9,10 @@ interface TableRowProps {
 const TableRow = ({ label, children }: TableRowProps) => {
     return (
         <tr className={styles.tableRow}>
-        <th className={styles.labelCell}>{label}</th>
-        <td className={styles.contentCell}>{children}</td>
+            <th className={styles.labelCell}>{label}</th>
+            <td className={styles.contentCell}>{children}</td>
         </tr>
     );
 };
 
-export default TableRow;
+export default TableRow; /* 테이블 행 관련 테이블 -> 라벨 - Input 구조 테이블 작성할 떄 사용*/

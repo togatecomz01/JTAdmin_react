@@ -1,23 +1,5 @@
 @use "../../../assets/styles/abstracts/variables" as vars;
 
-.tableContainer {
-  display: grid;
-  gap: 1rem;
-
-  padding: vars.$padding;
-}
-
-.tableWrapper {
-  display: grid;
-  gap: 2rem;
-
-  padding: vars.$padding;
-  background: vars.$white-color;
-  border: vars.$border;
-  box-shadow: 0 5px 5px rgba(54, 54, 54, 0.103);
-  border-radius: 1rem;
-}
-
 .table {
   border-collapse: separate;
   border-spacing: 0;

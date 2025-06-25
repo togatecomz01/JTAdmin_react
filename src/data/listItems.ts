@@ -1,4 +1,4 @@
-export const ACCOUNT_LIST = {
+export const ACCOUNT_EXAMPLE = {
   text: { title: "계정관리", subTitle: "메인관리자 목록" },
   headers: [
     {

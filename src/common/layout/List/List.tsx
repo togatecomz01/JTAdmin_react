@@ -2,9 +2,11 @@ import { useState } from "react";
 import styles from "./List.module.scss";
 
 function List({
+  text,
   headers,
   listItems,
 }: {
+  text: { title: string; subTitle: string };
   headers: { text: string; value: string }[];
   listItems: Record<string, string>[];
 }) {
@@ -20,9 +22,9 @@ function List({
 
   return (
     <div className={styles.listContainer}>
-      <h1>계정관리</h1>
+      <h1>{text.title}</h1>
       <div className={styles.listWrapper}>
-        <h2>메인관리자 목록</h2>
+        <h2>{text.subTitle}</h2>
         <table className={styles.list}>
           <thead>
             <tr>

@@ -3,7 +3,7 @@ import styles from "./Button.module.scss";
 type ButtonProps = {
   name: string;
   color?: "primary" | "disabled" | "cancel";
-  onClick: () => void;
+  onClick?: () => void;
 };
 
 function Button({ name, color = "primary", onClick }: ButtonProps) {

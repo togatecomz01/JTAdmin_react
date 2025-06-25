@@ -3,8 +3,6 @@ import Layout from "../common/layout/Layout";
 import List from "../common/layout/List/List";
 import { HEADERS, LIST_ITEMS } from "../constants/listItems";
 import Table from "../common/layout/Table/Table";
-import Popup from "../common/layout/Popup/Popup";
-// import Table from "../common/layout/Table/Table";
 
 const Router = () => {
   return (
@@ -16,7 +14,6 @@ const Router = () => {
             element={<List headers={HEADERS} listItems={LIST_ITEMS} />}
           />
           <Route path="/account/modify" element={<Table />} />
-          <Route path="/popup" element={<Popup text={"팝업이에용"} />} />
         </Route>
       </Routes>
     </BrowserRouter>

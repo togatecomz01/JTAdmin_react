@@ -1,5 +1,7 @@
+import Button from "../../button/Button";
 import Input from "../../form/Input/Input";
 import styles from "./Table.module.scss";
+import { usePopup } from "../../../contexts/PopupContext";
 
 const TABLE_EXAMPLE = {
   headers: [
@@ -34,6 +36,8 @@ const TABLE_EXAMPLE = {
 };
 
 function Table() {
+  const { openPopup } = usePopup();
+
   return (
     <div className={styles.tableContainer}>
       <h1>계정관리</h1>
@@ -60,6 +64,13 @@ function Table() {
             ))}
           </tbody>
         </table>
+      </div>
+      <div>
+        <Button
+          name="등록"
+          color="primary"
+          onClick={() => openPopup("등록하실거여?")}
+        />
       </div>
     </div>
   );

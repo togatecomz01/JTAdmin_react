@@ -7,7 +7,7 @@ const menuData = [
     {
         id: 'account',
         name: '계정관리',
-        children: [{ name: '메인관리자' }, { name: '부관리자' }],
+        children: [{ name: '메인관리자' }, { name: '부관리자' }, { name: '게시판'}],
     },
     {
         id: 'main',

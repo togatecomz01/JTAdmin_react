@@ -1,0 +1,26 @@
+@import '../../../styles/variables.scss';
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: $font-size-xlarge;
+    font-weight: $font-weight-normal;
+}
+
+a{
+    color: $text-primary;
+}
+
+.pageNumber.active {
+    color: $text-primary;
+    font-weight: $font-weight-bold;
+    text-decoration: underline;
+}
+
+.prev img {
+    transform: rotate(180deg);
+}

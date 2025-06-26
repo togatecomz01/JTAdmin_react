@@ -1,3 +1,4 @@
+import './styles/font.scss'; 
 import './styles/reset.scss';
 import './styles/form.scss';
 import { StrictMode } from 'react'

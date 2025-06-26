@@ -22,12 +22,15 @@ $border-secondary: #E3E5EB;     // 보조 테두리 색상
 //Fonts
 $font-family-base: 'NotoSansKR', sans-serif;
 $font-weight-normal: 400;
+$font-weight-reg: 500;
 $font-weight-bold: 700;
 
 $font-size-base: 16px; // 이것도 rem으로 바꾸는게 좋을것 같음 1.
 $font-size-large: 18px;
+$font-size-xlarge: 20px;
 $font-size-title: 30px;
 
 //Layout
 $layout-width-lnb: 280px;// 이것도 rem으로 바꾸는게 좋을것? 같음 2.
 $border-radius-base: 5px;
+$border-radius-second: 10px;

@@ -6,6 +6,11 @@
         text-align: center;
         font-weight: $font-weight-bold;
         background-color: $background-main;
-        border-bottom: 2px solid $primary-color; // 헤더 하단은 강조
+        border-bottom: 1px solid $border-primary;
+        border-right: 1px solid $border-primary;
+
+        &:last-child {
+        border-right: none;
+        }
     }
-    }
+}

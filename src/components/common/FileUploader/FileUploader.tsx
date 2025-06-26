@@ -1,4 +1,3 @@
-// src/components/common/FileUploader/FileUploader.tsx
 import styles from './FileUploader.module.scss';
 import btnStyles from '../Button/Button.module.scss';
 

@@ -20,3 +20,35 @@
     background-color: $background-main;
     overflow-y: auto; //내용이 길어지면 lnb를 제외하고 스크롤
 }
+.control-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-panel {
+    width: 100%;
+    background-color: $background-component;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+.page-main-title {
+    position: relative;
+    font-size: 30px;
+    font-weight:500;
+    padding-left: 20px;
+    margin-bottom: 20px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px; 
+        height: 80%;
+        background-color: $text-primary;
+    }
+}

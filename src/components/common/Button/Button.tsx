@@ -2,7 +2,7 @@ import styles from './Button.module.scss';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     children: React.ReactNode;
-    variant?: 'primary' | 'secondary' | 'neutral' | 'icon' | 'file';
+    variant?: 'primary' | 'secondary' | 'neutral' | 'icon' | 'file' |'pagination_arrow';
     size?: 'small' | 'large' | 'file_size';
 }
 

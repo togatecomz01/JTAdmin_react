@@ -4,12 +4,18 @@
     margin-top: 20px;
     width: 100%; // 바꿔주기
     border: 1px solid $border-primary;
-    border-radius: $border-radius-base;
+    border-radius: $border-radius-second;
     background-color: $background-component;
     overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .table {
     width: 100%;
     border-collapse: collapse;
+    tbody tr:last-child {
+        th, td {
+        border-bottom: none;
+        }
+    }
 }

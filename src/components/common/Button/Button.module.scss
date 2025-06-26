@@ -79,3 +79,18 @@
     height: 44px;
     font-size: 14px;
 }
+
+//pagination버튼
+.pagination_arrow {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+
+  // 내부 이미지 크기 제어
+    img {
+        width: 23px;
+        height: 23px;
+        display: block;
+    }
+}

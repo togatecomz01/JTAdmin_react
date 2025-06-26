@@ -1,0 +1,31 @@
+/* src/styles/font.scss */
+
+// NotoSansKR - Regular (400)
+@font-face {
+    font-family: 'NotoSansKR';
+    font-style: normal;
+    font-weight: 400; // 이 폰트 파일은 굵기 400을 담당합니다.
+    src: url('/src/fonts/notokr-regular.woff2') format('woff2'),
+        url('/src/fonts/notokr-regular.woff') format('woff');
+    // 폰트 파일의 실제 경로에 맞게 url()을 수정해야 합니다.
+    // public 폴더를 기준으로 경로를 잡는 것이 일반적입니다.
+}
+
+// NotoSansKR - Bold (700)
+@font-face {
+    font-family: 'NotoSansKR';
+    font-style: normal;
+    font-weight: 700; // ✨ 이 폰트 파일은 굵기 700을 담당합니다.
+    src: url('/src/fonts/notokr-bold.woff2') format('woff2'),
+        url('/src/fonts/notokr-bold.woff') format('woff');
+}
+
+// 필요하다면 다른 굵기도 추가
+// NotoSansKR - Medium (500)
+@font-face {
+    font-family: 'NotoSansKR';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/src/fonts/notokr-medium.woff2') format('woff2'),
+        url('/src/fonts//notokr-medium.woff') format('woff');
+}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./List.module.scss";
+import arrow from "../../../assets/images/arrow.svg";
 
 function List({
   headers,
@@ -45,8 +46,9 @@ function List({
       </table>
 
       {/* 페이지네이션 버튼 */}
-      {totalPages > itemsPerPage && (
+      {listItems.length > itemsPerPage && (
         <div className={styles.pagination}>
+          <img src={arrow} />
           {Array.from({ length: totalPages }).map((_, i) => (
             <button
               key={i}
@@ -56,6 +58,7 @@ function List({
               {i + 1}
             </button>
           ))}
+          <img src={arrow} />
         </div>
       )}
     </>

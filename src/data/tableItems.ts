@@ -47,3 +47,14 @@ export const ACCOUNT_TABLE_SUB = {
     },
   ],
 };
+
+export const ACCOUNT_TABLE_SUB_MODIFY = {
+  headers: [
+    ...ACCOUNT_TABLE.headers,
+    {
+      text: "메뉴권한",
+      value: "checkbox",
+      items: ["메인관리", "메뉴관리", "회사관리", "금융소비자", "자료실"],
+    },
+  ],
+};

@@ -55,9 +55,8 @@
 
   button {
     padding: 0.4rem 0.8rem;
-    background: #eee;
-    border: 1px solid #ccc;
     cursor: pointer;
+    font-size: large;
 
     &:hover {
       background: #ddd;
@@ -65,7 +64,17 @@
   }
 
   .activePage {
-    background: #333;
-    color: #fff;
+    text-decoration: underline;
+  }
+
+  img {
+    width: 2%;
+    filter: brightness(80%);
+  }
+  img:first-child {
+    transform: rotate(90deg);
+  }
+  img:last-child {
+    transform: rotate(-90deg);
   }
 }

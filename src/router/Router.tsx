@@ -7,7 +7,7 @@ import SubList from "../pages/SubList";
 import SubListWrite from "../pages/SubListWrite";
 import SubListModify from "../pages/SubListModify";
 import NoticeList from "../pages/NoticeList";
-import Login from "../pages/Login";
+import Login from "../pages/Login/Login";
 
 const Router = () => {
   return (

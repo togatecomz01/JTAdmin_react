@@ -1,4 +1,6 @@
 import styles from "./Input.module.scss";
+import search from "../../../assets/images/search.svg";
+
 type InputProps = {
   type:
     | "text"
@@ -7,7 +9,8 @@ type InputProps = {
     | "tel"
     | "date"
     | "content"
-    | "checkbox";
+    | "checkbox"
+    | "search";
   placeholder?: string;
   value?: string;
   items?: string[];
@@ -31,6 +34,18 @@ const Input = ({ type, placeholder, value, items, onChange }: InputProps) => {
             <label htmlFor={`check${index}`}>{item}</label>
           </div>
         ))}
+      </div>
+    );
+
+  if (type === "search")
+    return (
+      <div className={styles.searchBarWrapper}>
+        <form className={styles.searchBar}>
+          <input type={type} id="user-search" />
+          <button>
+            <img src={search} />
+          </button>
+        </form>
       </div>
     );
 

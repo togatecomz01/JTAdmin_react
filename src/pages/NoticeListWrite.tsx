@@ -4,7 +4,7 @@ import ButtonContainer from "../common/button/ButtonContainer/ButtonContainer";
 import Container from "../common/layout/Container/Container";
 import Table from "../common/layout/Table/Table";
 import Wrapper from "../common/layout/Wrapper/Wrapper";
-import { ACCOUNT_TABLE_NOTICE_WRITE } from "../data/tableItems";
+import { ACCOUNT_MENU_NOTICE_WRITE } from "../data/tableItems";
 import { usePopup } from "../contexts/PopupContext";
 
 const NoticeListWrite = () => {
@@ -13,7 +13,7 @@ const NoticeListWrite = () => {
   return (
     <Container title={"계정관리"}>
       <Wrapper subTitle={"게시판 등록"}>
-        <Table tableData={ACCOUNT_TABLE_NOTICE_WRITE} />
+        <Table tableData={ACCOUNT_MENU_NOTICE_WRITE} />
       </Wrapper>
 
       <ButtonContainer>

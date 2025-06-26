@@ -5,7 +5,7 @@ import Wrapper from "../common/layout/Wrapper/Wrapper";
 import Table from "../common/layout/Table/Table";
 import ButtonContainer from "../common/button/ButtonContainer/ButtonContainer";
 import Button from "../common/button/Button";
-import { ACCOUNT_TABLE_MAIN } from "../data/tableItems";
+import { ACCOUNT_MENU_MAIN } from "../data/tableItems";
 
 const AccountListModify = () => {
   const { openPopup } = usePopup();
@@ -13,7 +13,7 @@ const AccountListModify = () => {
   return (
     <Container title={"메인관리자"}>
       <Wrapper subTitle={"관리자 설정"}>
-        <Table tableData={ACCOUNT_TABLE_MAIN} />
+        <Table tableData={ACCOUNT_MENU_MAIN} />
       </Wrapper>
 
       <ButtonContainer>

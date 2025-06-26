@@ -2,16 +2,7 @@ import styles from "./Input.module.scss";
 import search from "../../../assets/images/search.svg";
 
 type InputProps = {
-  type:
-    | "text"
-    | "password"
-    | "number"
-    | "tel"
-    | "date"
-    | "content"
-    | "checkbox"
-    | "search"
-    | "file";
+  type: string;
   placeholder?: string;
   value?: string;
   items?: string[];

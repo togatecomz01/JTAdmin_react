@@ -4,7 +4,7 @@ import ButtonContainer from "../common/button/ButtonContainer/ButtonContainer";
 import Container from "../common/layout/Container/Container";
 import Table from "../common/layout/Table/Table";
 import Wrapper from "../common/layout/Wrapper/Wrapper";
-import { ACCOUNT_TABLE_SUB } from "../data/tableItems";
+import { ACCOUNT_MENU_SUB } from "../data/tableItems";
 import { usePopup } from "../contexts/PopupContext";
 
 const SubListWrite = () => {
@@ -13,7 +13,7 @@ const SubListWrite = () => {
   return (
     <Container title={"부관리자"}>
       <Wrapper subTitle={"부관리자 등록"}>
-        <Table tableData={ACCOUNT_TABLE_SUB} />
+        <Table tableData={ACCOUNT_MENU_SUB} />
       </Wrapper>
 
       <ButtonContainer>

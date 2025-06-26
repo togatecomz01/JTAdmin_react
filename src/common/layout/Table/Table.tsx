@@ -1,22 +1,24 @@
-import { getInputByHeader } from "../../../utils/inputMapper";
+import Input from "../../form/Input/Input";
 import styles from "./Table.module.scss";
 
 function Table({
   tableData,
 }: {
-  tableData: { headers: { text: string; value: string; items?: string[] }[] };
+  tableData: { title: string; type: string; items?: string[] }[];
 }) {
   return (
     <table className={styles.table}>
       <tbody>
-        {tableData.headers.map((header) => {
+        {tableData.map((data) => {
           return (
             <tr>
-              <th>{header.text}</th>
+              <th>{data.title}</th>
               <td>
-                {header.items
-                  ? getInputByHeader(header.value, header.items)
-                  : getInputByHeader(header.value)}
+                {data.items ? (
+                  <Input type={data.type} items={data.items} />
+                ) : (
+                  <Input type={data.type} />
+                )}
               </td>
             </tr>
           );

@@ -18,13 +18,18 @@
   @include input;
 }
 
-.checkboxWrapper {
+.itemsWrapper {
   display: flex;
   gap: 2rem;
 }
 
 .checkbox {
   display: flex;
+}
+
+.radio {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .searchBarWrapper {

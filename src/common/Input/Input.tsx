@@ -19,7 +19,7 @@ const Input = ({ type, placeholder, value, items, onChange }: InputProps) => {
 
   if (type === "checkbox")
     return (
-      <div className={styles.checkboxWrapper}>
+      <div className={styles.itemsWrapper}>
         {items?.map((item, index) => (
           <div className={styles.checkbox}>
             <input type={type} id={`check${index}`} />
@@ -38,6 +38,18 @@ const Input = ({ type, placeholder, value, items, onChange }: InputProps) => {
             <img src={search} />
           </button>
         </form>
+      </div>
+    );
+
+  if (type === "radio")
+    return (
+      <div className={styles.itemsWrapper}>
+        {items?.map((item) => (
+          <div className={styles.radio}>
+            <input type={type} name="radio" value={item} />
+            {item}
+          </div>
+        ))}
       </div>
     );
 

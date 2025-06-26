@@ -1,7 +1,8 @@
 import styles from "./Header.module.scss";
 import userIcon from "../../../assets/images/user-icon.svg";
+import { NAME } from "../../../data/userInfo";
 
-function Header({ name }: { name: string }) {
+function Header() {
   return (
     <div className={styles.header}>
       <div className={styles.userInfo}>
@@ -9,7 +10,7 @@ function Header({ name }: { name: string }) {
           <img src={userIcon} alt="User Icon" />
         </div>
         <div>
-          <strong>{name}</strong> 님
+          <strong>{NAME}</strong> 님
         </div>
       </div>
     </div>

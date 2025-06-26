@@ -6,7 +6,7 @@ import styles from "./Layout.module.scss";
 export default function Layout() {
   return (
     <div className={styles.layout}>
-      <Header name={"홍길동"} />
+      <Header />
       <LNB />
       <main className={styles.main}>
         <Outlet />

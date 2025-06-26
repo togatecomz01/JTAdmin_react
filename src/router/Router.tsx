@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "../common/layout/Layout";
-import Home from "../pages/Home";
+import Home from "../pages/Home/Home";
 import AccountList from "../pages/AccountList";
 import AccountListModify from "../pages/AccountListModify";
 import SubList from "../pages/SubList";
 import NoticeList from "../pages/NoticeList";
+import Login from "../pages/Login";
 
 const Router = () => {
   return (
@@ -17,6 +18,8 @@ const Router = () => {
           <Route path="/account/sublist" element={<SubList />} />
           <Route path="/account/noticelist" element={<NoticeList />} />
         </Route>
+
+        <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );

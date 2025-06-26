@@ -17,3 +17,12 @@
 .contentInput {
   @include input;
 }
+
+.checkboxWrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+.checkbox {
+  display: flex;
+}

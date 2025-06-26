@@ -1,6 +1,9 @@
 import Input from "../common/form/Input/Input";
 
-export const getInputByHeader = (headerValue: string) => {
+export const getInputByHeader = (
+  headerValue: string,
+  headerItems?: string[]
+) => {
   if (["id", "department", "name", "email"].includes(headerValue)) {
     return <Input type="text" />;
   }
@@ -11,7 +14,7 @@ export const getInputByHeader = (headerValue: string) => {
     return <Input type="tel" />;
   }
   if (headerValue === "checkbox") {
-    return <Input type="checkbox" />;
+    return <Input type="checkbox" items={headerItems} />;
   }
   return null;
 };

@@ -24,11 +24,14 @@ const Input = ({ type, placeholder, value, items, onChange }: InputProps) => {
 
   if (type === "checkbox")
     return (
-      <>
-        {items?.map(() => (
-          <input type={type} />
+      <div className={styles.checkboxWrapper}>
+        {items?.map((item, index) => (
+          <div className={styles.checkbox}>
+            <input type={type} id={`check${index}`} />
+            <label htmlFor={`check${index}`}>{item}</label>
+          </div>
         ))}
-      </>
+      </div>
     );
 
   return (

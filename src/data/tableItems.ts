@@ -1,7 +1,7 @@
 export const ACCOUNT_MENU = [
   {
     title: "ID",
-    type: "title",
+    type: "text",
   },
   {
     title: "비밀번호",
@@ -13,15 +13,15 @@ export const ACCOUNT_MENU = [
   },
   {
     title: "부서명",
-    type: "title",
+    type: "text",
   },
   {
     title: "성명",
-    type: "title",
+    type: "text",
   },
   {
     title: "연락처",
-    type: "tel",
+    type: "number",
   },
 ];
 
@@ -49,6 +49,45 @@ export const ACCOUNT_MENU_NOTICE_WRITE = [
   },
   {
     title: "작성일",
+    type: "",
+  },
+  {
+    title: "제목",
+    type: "text",
+  },
+  {
+    title: "게시일",
+    type: "date",
+  },
+  {
+    title: "기준일",
+    type: "date",
+  },
+  {
+    title: "내용",
+    type: "textarea",
+  },
+  {
+    title: "이미지파일",
+    type: "image",
+  },
+  {
+    title: "이미지 alt값",
+    type: "text",
+  },
+  {
+    title: "첨부파일",
+    type: "file",
+  },
+];
+
+export const ACCOUNT_MENU_NOTICE_MODIFY = [
+  {
+    title: "수정자",
+    type: "",
+  },
+  {
+    title: "수정일",
     type: "",
   },
   {

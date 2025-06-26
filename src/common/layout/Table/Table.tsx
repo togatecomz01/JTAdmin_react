@@ -1,4 +1,4 @@
-import Input from "../../form/Input/Input";
+import Input from "../../Input/Input";
 import styles from "./Table.module.scss";
 
 function Table({

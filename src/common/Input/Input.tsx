@@ -1,5 +1,5 @@
 import styles from "./Input.module.scss";
-import search from "../../../assets/images/search.svg";
+import search from "../../assets/images/search.svg";
 
 type InputProps = {
   type: string;
@@ -12,7 +12,7 @@ type InputProps = {
 };
 
 const Input = ({ type, placeholder, value, items, onChange }: InputProps) => {
-  if (type === "content")
+  if (type === "textarea")
     return (
       <textarea className={styles.contentInput} placeholder={placeholder} />
     );

@@ -3,8 +3,8 @@ import { usePopup } from "../contexts/PopupContext";
 import Container from "../common/layout/Container/Container";
 import Wrapper from "../common/layout/Wrapper/Wrapper";
 import Table from "../common/layout/Table/Table";
-import ButtonContainer from "../common/button/ButtonContainer/ButtonContainer";
-import Button from "../common/button/Button";
+import ButtonContainer from "../common/Button/ButtonContainer/ButtonContainer";
+import Button from "../common/Button/Button";
 import { ACCOUNT_MENU_MAIN } from "../data/tableItems";
 
 const AccountListModify = () => {

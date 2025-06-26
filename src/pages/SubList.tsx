@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import ButtonContainer from "../common/button/ButtonContainer/ButtonContainer";
+import ButtonContainer from "../common/Button/ButtonContainer/ButtonContainer";
 import Container from "../common/layout/Container/Container";
 import List from "../common/layout/List/List";
 import Wrapper from "../common/layout/Wrapper/Wrapper";
 import { ACCOUNT_EXAMPLE_SUB } from "../data/listItems";
-import Button from "../common/button/Button";
+import Button from "../common/Button/Button";
 
 const SubList = () => {
   return (

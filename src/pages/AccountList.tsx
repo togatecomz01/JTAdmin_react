@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import Container from "../common/layout/Container/Container";
 import Wrapper from "../common/layout/Wrapper/Wrapper";
 import List from "../common/layout/List/List";
-import ButtonContainer from "../common/button/ButtonContainer/ButtonContainer";
-import Button from "../common/button/Button";
+import ButtonContainer from "../common/Button/ButtonContainer/ButtonContainer";
+import Button from "../common/Button/Button";
 import { ACCOUNT_EXAMPLE } from "../data/listItems";
 
 const AccountList = () => {

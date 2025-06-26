@@ -4,7 +4,7 @@ export const getInputByHeader = (
   headerValue: string,
   headerItems?: string[]
 ) => {
-  if (["id", "department", "name", "email"].includes(headerValue)) {
+  if (["id", "department", "name", "email", "text"].includes(headerValue)) {
     return <Input type="text" />;
   }
   if (["password", "passwordCheck"].includes(headerValue)) {
@@ -15,6 +15,12 @@ export const getInputByHeader = (
   }
   if (headerValue === "checkbox") {
     return <Input type="checkbox" items={headerItems} />;
+  }
+  if (headerValue === "date") {
+    return <Input type="date" items={headerItems} />;
+  }
+  if (headerValue === "file") {
+    return <Input type="file" items={headerItems} />;
   }
   return null;
 };

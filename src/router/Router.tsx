@@ -7,7 +7,10 @@ import SubList from "../pages/SubList";
 import SubListWrite from "../pages/SubListWrite";
 import SubListModify from "../pages/SubListModify";
 import NoticeList from "../pages/NoticeList";
+import NoticeListWrite from "../pages/NoticeListWrite";
+
 import Login from "../pages/Login/Login";
+import NoticeListModify from "../pages/NoticeListModify";
 
 const Router = () => {
   return (
@@ -21,6 +24,14 @@ const Router = () => {
           <Route path="/account/sublist/write" element={<SubListWrite />} />
           <Route path="/account/sublist/modify" element={<SubListModify />} />
           <Route path="/account/noticelist" element={<NoticeList />} />
+          <Route
+            path="/account/noticelist/write"
+            element={<NoticeListWrite />}
+          />
+          <Route
+            path="/account/noticelist/modify"
+            element={<NoticeListModify />}
+          />
         </Route>
 
         <Route path="/login" element={<Login />} />

@@ -16,8 +16,11 @@ const NoticeList = () => {
       </Wrapper>
 
       <ButtonContainer>
-        <Link to="/account/list/modify">
+        <Link to="/account/noticelist/write">
           <Button name="등록" />
+        </Link>
+        <Link to="/account/noticelist/modify">
+          <Button name="수정" />
         </Link>
       </ButtonContainer>
     </Container>

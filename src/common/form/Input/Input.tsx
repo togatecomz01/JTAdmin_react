@@ -10,7 +10,8 @@ type InputProps = {
     | "date"
     | "content"
     | "checkbox"
-    | "search";
+    | "search"
+    | "file";
   placeholder?: string;
   value?: string;
   items?: string[];

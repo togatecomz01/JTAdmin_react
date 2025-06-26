@@ -4,6 +4,7 @@ import styles from "./LNB.module.scss";
 import MENU from "../../../constants/menu";
 import logo from "../../../assets/images/logo_fff.png";
 import arrow from "../../../assets/images/arrow.svg";
+import { Link } from "react-router-dom";
 
 function LNB() {
   const [activeMenu, setActiveMenu] = useState("");
@@ -14,9 +15,10 @@ function LNB() {
 
   return (
     <nav className={styles.Lnb}>
-      <div className={styles.Logo}>
+      <Link to="/" className={styles.Logo}>
         <img src={logo} alt="Logo" />
-      </div>
+      </Link>
+
       <div className={styles.Menu}>
         {MENU.map((menu) => (
           <div key={menu.name} className={styles.MenuItem}>

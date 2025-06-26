@@ -4,6 +4,8 @@ import Home from "../pages/Home/Home";
 import AccountList from "../pages/AccountList";
 import AccountListModify from "../pages/AccountListModify";
 import SubList from "../pages/SubList";
+import SubListWrite from "../pages/SubListWrite";
+import SubListModify from "../pages/SubListModify";
 import NoticeList from "../pages/NoticeList";
 import Login from "../pages/Login";
 
@@ -16,6 +18,8 @@ const Router = () => {
           <Route path="/account/list" element={<AccountList />} />
           <Route path="/account/list/modify" element={<AccountListModify />} />
           <Route path="/account/sublist" element={<SubList />} />
+          <Route path="/account/sublist/write" element={<SubListWrite />} />
+          <Route path="/account/sublist/modify" element={<SubListModify />} />
           <Route path="/account/noticelist" element={<NoticeList />} />
         </Route>
 

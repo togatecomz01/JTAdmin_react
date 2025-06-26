@@ -1,4 +1,4 @@
-export const ACCOUNT_TABLE_EXAMPLE = {
+export const ACCOUNT_TABLE = {
   headers: [
     {
       text: "ID",
@@ -24,9 +24,26 @@ export const ACCOUNT_TABLE_EXAMPLE = {
       text: "연락처",
       value: "contact",
     },
+  ],
+};
+
+export const ACCOUNT_TABLE_MAIN = {
+  headers: [
+    ...ACCOUNT_TABLE.headers,
     {
       text: "이메일",
       value: "email",
+    },
+  ],
+};
+
+export const ACCOUNT_TABLE_SUB = {
+  headers: [
+    ...ACCOUNT_TABLE.headers,
+    {
+      text: "메뉴권한",
+      value: "checkbox",
+      items: ["메인관리", "메뉴관리", "회사관리", "금융소비자", "자료실"],
     },
   ],
 };

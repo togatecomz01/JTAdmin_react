@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prd": "react-scripts build && ROBOCOPY build ../galleryTwo/react/JTAdmin-react/minjunggggg /E /IS /IT"
   },
   "dependencies": {
     "react": "^19.1.0",

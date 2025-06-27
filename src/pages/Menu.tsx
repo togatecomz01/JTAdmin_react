@@ -1,5 +1,59 @@
+import { Link } from "react-router-dom";
+import Button from "../common/Button/Button";
+import ButtonContainer from "../common/Button/ButtonContainer/ButtonContainer";
+import Container from "../common/layout/Container/Container";
+import Wrapper from "../common/layout/Wrapper/Wrapper";
+import { usePopup } from "../contexts/PopupContext";
+import List from "../common/layout/List/List";
+import Input from "../common/Input/Input";
+
+const HEADERS = [
+  { text: "순서", value: "order" },
+  { text: "메뉴명", value: "menuTag" },
+  { text: "하위메뉴변경", value: "changeSubmenu" },
+];
+
+const LIST_ITEMS = [
+  {
+    order: <Input type={"text"} />,
+    menuTag: <Input type={"text"} />,
+    changeSubmenu: <Button name="바로가기" />,
+  },
+  {
+    order: <Input type={"text"} />,
+    menuTag: <Input type={"text"} />,
+    changeSubmenu: <Button name="바로가기" />,
+  },
+  {
+    order: <Input type={"text"} />,
+    menuTag: <Input type={"text"} />,
+    changeSubmenu: <Button name="바로가기" />,
+  },
+];
+
 const Menu = () => {
-  return <div>Menu</div>;
+  const { openPopup } = usePopup();
+
+  return (
+    <Container title={"메뉴관리"}>
+      <Wrapper subTitle={"메뉴 관리 > 메뉴"}>
+        <List headers={HEADERS} listItems={LIST_ITEMS} />
+      </Wrapper>
+
+      <ButtonContainer>
+        <Button
+          name="저장"
+          color="primary"
+          onClick={() =>
+            openPopup({ message: "저장되었습니다", button: "확인" })
+          }
+        />
+        <Link to="/account/list">
+          <Button name="목록" color="disabled" />
+        </Link>
+      </ButtonContainer>
+    </Container>
+  );
 };
 
 export default Menu;

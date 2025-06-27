@@ -7,7 +7,7 @@ function List({
   listItems,
 }: {
   headers: { text: string; value: string }[];
-  listItems: Record<string, string>[];
+  listItems: Record<string, string | React.ReactNode>[];
 }) {
   const headerKey = headers.map((header) => header.value);
 

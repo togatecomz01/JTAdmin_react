@@ -33,10 +33,10 @@ const Router = () => {
             path="/account/noticelist/modify"
             element={<NoticeListModify />}
           />
+          <Route path="/menu" element={<Menu />} />
         </Route>
 
         <Route path="/login" element={<Login />} />
-        <Route path="/menu" element={<Menu />} />
       </Routes>
     </BrowserRouter>
   );

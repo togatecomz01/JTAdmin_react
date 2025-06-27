@@ -18,7 +18,12 @@ const AccountMainPage = () => {
                     <TableHeader columns={userListColumns} />
                     <tbody>
                         {userList.map((user: User) => (
-                        <TableDataItem key={user.no} item={user} />
+                            <TableDataItem key={user.no}>
+                                <td>{user.no}</td>
+                                <td>{user.id}</td>
+                                <td>{user.department}</td>
+                                <td>{user.name}</td>
+                            </TableDataItem>
                         ))}
                     </tbody>
                 </Table>

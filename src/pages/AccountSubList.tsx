@@ -7,7 +7,7 @@ import Button from '../components/common/Button/Button';
 import { SubUserList, userListColumns } from '../components/common/Table/TableData'; 
 import type { User } from '../components/common/Table/TableData';
 
-const AccountMainPage = () => {
+const AccountSubList = () => {
     return (
         <div>
             <h2 className="page-main-title">계정관리</h2>
@@ -16,9 +16,14 @@ const AccountMainPage = () => {
                 <Table>
                     <TableHeader columns={userListColumns} />
                     <tbody>
-                        {SubUserList.map((user: User) => (
-                        <TableDataItem key={user.no} item={user} />
-                        ))}
+                            {SubUserList.map((user: User) => (
+                                <TableDataItem key={user.no}>
+                                    <td>{user.no}</td>
+                                    <td>{user.id}</td>
+                                    <td>{user.department}</td>
+                                    <td>{user.name}</td>
+                                </TableDataItem>
+                            ))}
                     </tbody>
                 </Table>
             </div>
@@ -31,4 +36,4 @@ const AccountMainPage = () => {
     );
 };
 
-export default AccountMainPage;
+export default AccountSubList;

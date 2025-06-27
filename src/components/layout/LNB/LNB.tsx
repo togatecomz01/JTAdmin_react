@@ -1,23 +1,45 @@
 import styles from './LNB.module.scss';
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
+import { Link,NavLink } from 'react-router-dom';
 import LogoImage from '../../common/img/logo_fff.png';
 import Arrowicon from '../../common/img/arrow.png'
+
+interface SubMenuItem {
+    name: string;
+    path?: string; //path는 현재 계정관리,메인관리, 메뉴관리 쪽 라우팅 할거라 모든데이터에 추가x 라 타입정리해둠 
+}
+
+interface MenuItem {
+    id: string;
+    name: string;
+    children?: SubMenuItem[];
+}
+
 //메뉴 데이터 (나중엔 외부 파일이나 API로부터)
-const menuData = [
+const menuData: MenuItem[] = [
     {
         id: 'account',
         name: '계정관리',
-        children: [{ name: '메인관리자' }, { name: '부관리자' }, { name: '게시판'}],
+        children: [
+            { name: '메인관리자', path: '/account/main' },
+            { name: '부관리자', path: '/account/sub' },   
+            { name: '게시판', path: '/account/board' },
+        ],
     },
     {
         id: 'main',
         name: '메인관리',
-        children: [{ name: '팝업관리' }, { name: '메인배너관리' }],
+        children: [
+            { name: '팝업관리', path: '/main/popup' },
+            { name: '메인배너관리', path: '/main/banner' },
+        ],
     },
     {
         id: 'menu',
         name: '메뉴관리',
-        children: [{name : '메뉴관리'}],
+        children: [
+            { name: '메뉴관리', path: '/menu/menu' },
+        ],
     },
     {
         id: 'company',
@@ -63,7 +85,7 @@ const LNB = () => {
     return (
         <aside className={styles.lnb}>
         <h1 className={styles.logo}>
-            <a href="#"><img src={LogoImage} alt="로고" /></a>
+            <Link to="/"><img src={LogoImage} alt="로고" /></Link>
         </h1>
         <ul className={styles.menuList}>
             {menuData.map(menu => {
@@ -83,7 +105,9 @@ const LNB = () => {
                 {/* 2-depth 서브메뉴 */}
                 <div className={styles.subMenu}>
                     {menu.children?.map(child => (
-                    <a key={child.name} href="#">{child.name}</a>
+                    <NavLink key={child.name} to={child.path || '#'}/*  end={false}  */className={({ isActive }) => isActive ? styles.activeLink : ""}>
+                        {child.name}
+                    </NavLink>
                     ))}
                 </div>
                 </li>

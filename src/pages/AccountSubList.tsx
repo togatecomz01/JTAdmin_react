@@ -6,8 +6,19 @@ import TableDataItem from '../components/common/Table/TableDataItem';
 import Button from '../components/common/Button/Button';
 import { SubUserList, userListColumns } from '../components/common/Table/TableData'; 
 import type { User } from '../components/common/Table/TableData';
+import { useNavigate } from 'react-router-dom';
 
 const AccountSubList = () => {
+        const navigate = useNavigate();
+
+        const goToWritePage = () => {
+            navigate('/account/sub/write');
+        };
+
+        const goToModifyPage = () => {
+            navigate('/account/sub/modify'); 
+        };
+
     return (
         <div>
             <h2 className="page-main-title">계정관리</h2>
@@ -29,8 +40,8 @@ const AccountSubList = () => {
             </div>
             
             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '50px', gap:'20px' }}>
-                <Button variant="primary" size="large">등록</Button>
-                <Button variant="secondary" size="large">수정</Button>
+                <Button variant="primary" size="large"  onClick={goToWritePage}>등록</Button>
+                <Button variant="secondary" size="large" onClick={goToModifyPage}>수정</Button>
             </div>
         </div>
     );

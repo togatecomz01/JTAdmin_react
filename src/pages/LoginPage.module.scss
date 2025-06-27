@@ -1,0 +1,78 @@
+/* src/pages/LoginPage.module.scss */
+@import '../styles/variables.scss';
+
+// 1. 페이지 전체 컨테이너
+.loginPage {
+    width: 100vw;
+    height: 100vh;
+    // 그라데이션 배경
+    background: url(../components/common/img/bg_logn.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// 2. 가운데 흰색 로그인 박스
+.loginBox {
+    width: 600px;
+    padding: 60px 50px;
+    background-color: $background-component;
+    border-radius: $border-radius-second;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 40px; // 각 섹션 사이의 간격
+}
+
+// 3. 로고 및 상단 텍스트
+.header {
+    .logo {
+        width: 200px;
+        margin-bottom: 15px;
+    }
+    p {
+        color: $text-secondary;
+        font-size: 14px;
+    }
+}
+
+// 4. 입력 폼
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    align-items: center;
+    
+    :global(.form-control) {
+        background-color: #F8F8FA;
+        border: 1px solid #F8F8FA;
+        height: 50px;
+    }
+
+    .loginButton {
+        width: 70%; 
+        height: 55px;
+        margin-top: 10px;
+        font-size: $font-size-large;
+        font-weight: $font-weight-bold;
+        background: linear-gradient(90deg, #5A8FFF, #B0EFE2);
+        border: none;
+    }
+}
+
+// 에러 메시지
+.errorMessage {
+    color: #E24444;
+    font-size: 14px;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+// 5. 하단 안내 문구
+.footerText {
+    color: $text-light;
+    font-size: 14px;
+}

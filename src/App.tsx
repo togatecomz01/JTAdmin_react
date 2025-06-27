@@ -1,44 +1,47 @@
-/* import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import MainPage from './pages/MainPage'
-
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <MainPage></MainPage>
-    </>
-  )
-}
-
-export default App */
-/* import './styles/reset.scss';
-import './styles/form.scss'; */
-/* import MainPage from './pages/MainPage'; */
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
-import './styles/layout.scss';
-/* import LayoutTest from './pages/LayoutTest'; */
-import AccountList from './pages/AccountList' 
+import LoginPage from './pages/LoginPage';
+import MainPage from './pages/MainPage';
+import AccountList from './pages/AccountList';
 import AccountModify from './pages/AccountModify';
-import AccountSubList from './pages/AccountSubList';
 import AccountSubWrite from './pages/AccountSubWrite';
 import AccountSubModify from './pages/AccountSubModify';
-import NoticeList from './pages/NoticeList';
+import AccountSubList from './pages/AccountSubList';
 function App() {
   return (
-    <Layout>
-      {/* <MainPage /> */}
-      {/* <LayoutTest/> */}
-      <AccountList/>
-      <AccountModify/>
-      <AccountSubList/>
-      <AccountSubWrite/>
-      <AccountSubModify/>
-      <NoticeList/>
-    </Layout>
+    <Routes>
+      <Route path="/" element={<LoginPage />} />
+      
+      <Route 
+        path="/main" 
+        element={<Layout mainClassName="bgcFFF"><MainPage /></Layout>} 
+      />
+
+      <Route 
+        path="/account/main" 
+        element={<Layout><AccountList /></Layout>} 
+      />
+
+      <Route 
+        path="/account/modify" 
+        element={<Layout><AccountModify /></Layout>} 
+      />
+
+      <Route 
+        path="/account/sub" 
+        element={<Layout><AccountSubList /></Layout>} 
+      />
+
+      <Route 
+        path="/account/sub/modify" 
+        element={<Layout><AccountSubModify /></Layout>} 
+      />
+      <Route 
+        path="/account/sub/write" 
+        element={<Layout><AccountSubWrite /></Layout>} 
+      />
+    </Routes>
   );
 }
 

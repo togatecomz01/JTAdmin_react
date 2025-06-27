@@ -37,7 +37,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 18px 45px;
+            padding: 14px 45px;
             cursor: pointer;
             position: relative;
             font-size: $font-size-large;
@@ -66,6 +66,11 @@
                 text-decoration: none;
                 &:hover { color: white; }
             }
+            .activeLink {
+                color: white !important; //!important 추후 수정
+                font-weight: $font-weight-bold !important;
+            }
+            
         }
 
         //li에 active

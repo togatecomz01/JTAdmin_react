@@ -6,8 +6,14 @@ import Input from '../components/common/Input/Input';
 import Button from '../components/common/Button/Button';
 import Checkbox from '../components/common/Checkbox/Checkbox';
 import {CheckOptions} from '../components/common/Checkbox/CheckboxData'
+import { useNavigate } from 'react-router-dom';
 
 const AccountSubModify = () => {
+    const navigate = useNavigate();
+
+    const goToListPage = () => {
+            navigate('/account/sub/');
+        };
     return (
         <div>
             <h2 className="page-main-title">부관리자</h2>
@@ -57,8 +63,8 @@ const AccountSubModify = () => {
             </div>
             
             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '50px', gap: '20px'}}>
-                <Button variant="primary" size="large">저장</Button>
-                <Button variant="secondary" size="large">목록</Button>
+                <Button variant="primary" size="large" onClick={goToListPage}>저장</Button>
+                <Button variant="secondary" size="large" onClick={goToListPage}>목록</Button>
             </div>
         </div>
     );

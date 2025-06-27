@@ -6,23 +6,22 @@ import Input from '../components/common/Input/Input';
 import Button from '../components/common/Button/Button';
 import Checkbox from '../components/common/Checkbox/Checkbox';
 import {CheckOptions} from '../components/common/Checkbox/CheckboxData'
+import { useNavigate } from 'react-router-dom';
 
 const AccountModify = () => {
+    const navigate = useNavigate();
+
+    const goToListPage = () => {
+            navigate('/account/sub/');
+        };
+
     return (
         <div>
-            {/* 페이지 상단 메인 타이틀 */}
             <h2 className="page-main-title">부관리자</h2>
-            
-            {/* 흰색 패널 컨테이너 */}
             <div className="content-panel">
-                
-                {/* 패널 내부 소제목 */}
                 <PageTitle title="부관리자 등록" />
-                
-                {/* 메인 테이블 */}
                 <Table>
                     <tbody>
-                        {/* 2. TableRow와 Input을 사용해서 각 행을 구성합니다. */}
                         <TableRow label="ID *">
                             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                                 <Input type="text" width="33%" />
@@ -66,8 +65,8 @@ const AccountModify = () => {
             
             {/* 하단 버튼 영역 */}
             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '50px', gap: '20px'}}>
-                <Button variant="primary" size="large">저장</Button>
-                <Button variant="secondary" size="large">목록</Button>
+                <Button variant="primary" size="large" onClick={goToListPage}>저장</Button>
+                <Button variant="secondary" size="large" onClick={goToListPage}>목록</Button>
             </div>
         </div>
     );

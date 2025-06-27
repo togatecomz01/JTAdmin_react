@@ -4,11 +4,17 @@ import Table from '../components/common/Table/Table';
 import TableHeader from '../components/common/Table/TableHeader';
 import TableDataItem from '../components/common/Table/TableDataItem';
 import Button from '../components/common/Button/Button';
-
+import { useNavigate } from 'react-router-dom';
 import { userList , userListColumns} from '../components/common/Table/TableData'; 
 import type { User } from '../components/common/Table/TableData';
 
-const AccountMainPage = () => {
+const AccountList = () => {
+    const navigate = useNavigate();
+
+    const handleModifyClick = () => {
+        navigate('/account/modify');
+    }
+
     return (
         <div>
             <h2 className="page-main-title">계정관리</h2>
@@ -30,10 +36,10 @@ const AccountMainPage = () => {
             </div>
             
             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '50px' }}>
-                <Button variant="primary" size="large">수정</Button>
+                <Button variant="primary" size="large" onClick={handleModifyClick}>수정</Button>
             </div>
         </div>
     );
 };
 
-export default AccountMainPage;
+export default AccountList;

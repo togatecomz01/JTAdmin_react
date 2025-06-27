@@ -1,0 +1,56 @@
+@import '../styles/variables.scss';
+
+//페이지 내부 컨테이너
+.mainPage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%; 
+    padding: 0 5%;
+}
+
+//왼쪽 텍스트
+.welcomeTextSection {
+    flex-shrink: 0; //줄어들지 않도록
+    transform: translate(50px, -60px);
+}
+
+//오른쪽 이미지
+.welcomeImageSection {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    img {
+        max-width: 47vw;
+        height: auto;
+    }
+}
+
+
+.mainPageTitle { //메인페이지에서만 쓸 Pagetitle 스타일임
+    h2 { 
+        font-size: 46px;
+        line-height: 1.3;
+        padding-left: 30px;
+
+        &::before {
+        width: 7px;
+        height: 100%;
+        }
+    }
+}
+
+.loginInfo {
+    margin-top: 30px;
+    padding-left: 30px;
+    color: $text-secondary;
+    font-size: 16px;
+    
+    p {
+        margin: 0;
+        line-height: 1.6;
+    }
+}

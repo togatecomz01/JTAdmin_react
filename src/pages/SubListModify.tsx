@@ -4,7 +4,7 @@ import ButtonContainer from "../common/Button/ButtonContainer/ButtonContainer";
 import Container from "../common/layout/Container/Container";
 import Table from "../common/layout/Table/Table";
 import Wrapper from "../common/layout/Wrapper/Wrapper";
-import { ACCOUNT_MENU_SUB } from "../data/tableItems";
+import { ACCOUNT_MENU_MODIFY } from "../data/tableItems";
 import { usePopup } from "../contexts/PopupContext";
 
 const SubListModify = () => {
@@ -13,7 +13,7 @@ const SubListModify = () => {
   return (
     <Container title={"부관리자"}>
       <Wrapper subTitle={"부관리자 수정"}>
-        <Table tableData={ACCOUNT_MENU_SUB} />
+        <Table tableData={ACCOUNT_MENU_MODIFY} />
       </Wrapper>
 
       <ButtonContainer>

@@ -14,6 +14,10 @@ const NoticeListModify = () => {
     <Container title={"계정관리"}>
       <Wrapper subTitle={"게시판 수정"}>
         <Table tableData={ACCOUNT_MENU_NOTICE_MODIFY} />
+        <span>
+          첨부파일을 등록하실 경우에는 기존첨부파일은 모두 삭제되오니 유의하시기
+          바랍니다.
+        </span>
       </Wrapper>
 
       <ButtonContainer>

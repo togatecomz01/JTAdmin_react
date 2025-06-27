@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prd": "vite build && ROBOCOPY dist ../galleryTwo/react/{JTAdmin-react}/{choijisoon1} /E /IS /IT"
+    "prd": "vite build && ROBOCOPY dist ../galleryTwo/react/JTAdmin-react/choijisoon1 /E /IS /IT"
   },
   "dependencies": {
     "react": "^19.1.0",

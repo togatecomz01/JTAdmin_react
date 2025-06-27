@@ -1,6 +1,7 @@
 import styles from "./Header.module.scss";
 import userIcon from "../../../assets/images/user-icon.svg";
 import { NAME } from "../../../data/userInfo";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -12,6 +13,7 @@ function Header() {
         <div>
           <strong>{NAME}</strong> 님
         </div>
+        <Link to="/login">로그인</Link>
       </div>
     </div>
   );

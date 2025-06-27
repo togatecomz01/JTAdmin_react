@@ -11,6 +11,7 @@ import NoticeListWrite from "../pages/NoticeListWrite";
 
 import Login from "../pages/Login/Login";
 import NoticeListModify from "../pages/NoticeListModify";
+import Menu from "../pages/Menu";
 
 const Router = () => {
   return (
@@ -35,6 +36,7 @@ const Router = () => {
         </Route>
 
         <Route path="/login" element={<Login />} />
+        <Route path="/menu" element={<Menu />} />
       </Routes>
     </BrowserRouter>
   );

@@ -9,9 +9,17 @@ type InputProps = {
   onChange?: (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => void;
+  className?: string;
 };
 
-const Input = ({ type, placeholder, value, items, onChange }: InputProps) => {
+const Input = ({
+  type,
+  placeholder,
+  value,
+  items,
+  onChange,
+  className,
+}: InputProps) => {
   if (type === "textarea")
     return (
       <textarea className={styles.contentInput} placeholder={placeholder} />
@@ -55,7 +63,7 @@ const Input = ({ type, placeholder, value, items, onChange }: InputProps) => {
 
   return (
     <input
-      className={styles.textInput}
+      className={`${styles.textInput} ${className || ""}`}
       type={type}
       placeholder={placeholder}
       value={value}

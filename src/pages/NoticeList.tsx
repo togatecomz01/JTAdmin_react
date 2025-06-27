@@ -32,7 +32,6 @@ const AccountMainPage = () => {
                 <Table>
                 <TableHeader columns={NoticeListColumns} />
                     <tbody>
-                        {/* 4. 데이터를 map으로 순회하며, TableDataItem 안에 td들을 직접 렌더링 */}
                         {NoticeList.map((post: BoardPost) => (
                         <TableDataItem key={post.no}>
                             <td>{post.title}</td>

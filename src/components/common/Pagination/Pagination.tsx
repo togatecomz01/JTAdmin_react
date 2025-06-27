@@ -8,7 +8,7 @@ const Pagination = () => { //기능없음
             <Button variant="pagination_arrow" className={styles.prev}>
                 <img src={ArrowIcon} alt="이전 페이지" />
             </Button>
-            <a href="#" className={`${styles.pageNumber} ${styles.active}`}>1</a>
+            <a href="#" className={`${styles.pageNumber} ${styles.active}`}>1</a> {/* 링크할떄 # 별로안좋음 javascript:void() */}
             <a href="#" className={styles.pageNumber}>2</a>
             <a href="#" className={styles.pageNumber}>3</a>
             <Button variant="pagination_arrow">

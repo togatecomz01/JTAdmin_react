@@ -6,10 +6,17 @@ import Input from '../components/common/Input/Input';
 import Button from '../components/common/Button/Button';
 import Textarea from '../components/common/Textarea/Textarea'; 
 import FileUploader from '../components/common/FileUploader/FileUploader';
+import { useNavigate } from 'react-router-dom';
 
 const NoticeWrite = () => {
     const authorName = "홍길동";//로그인 데이터가 없어서 일단 변수처리만
     const today = new Date().toISOString().split('T')[0];//날짜
+
+    const navigate = useNavigate();
+
+    const goToListPage = () => {
+            navigate('/account/board/');
+        };
 
     return (
         <div>
@@ -64,9 +71,9 @@ const NoticeWrite = () => {
             </div>
             
             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '50px', gap: '20px'}}>
-                <Button variant="primary" size="large">저장</Button>
-                <Button variant="secondary" size="large">목록</Button>
-                <Button variant="neutral" size="large">취소</Button>
+                <Button variant="primary" size="large" onClick={goToListPage}>저장</Button>
+                <Button variant="secondary" size="large" onClick={goToListPage}>목록</Button>
+                <Button variant="neutral" size="large" onClick={goToListPage}>취소</Button>
             </div>
         </div>
     );

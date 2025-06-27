@@ -7,9 +7,19 @@ import TableDataItem from '../components/common/Table/TableDataItem';
 import Button from '../components/common/Button/Button';
 import Pagination from '../components/common/Pagination/Pagination';
 import { NoticeList, NoticeListColumns } from '../components/common/Table/TableData';
-import type { BoardPost } from '../components/common/Table/TableData'; // BoardPost 타입을 import
+import type { BoardPost } from '../components/common/Table/TableData';
+import { useNavigate } from 'react-router-dom';
 
 const AccountMainPage = () => {
+    const navigate = useNavigate();
+    
+    const handleModifyClick = () => {
+        navigate('/account/board/modify');
+    }
+    const handleWriteClick = () => {
+        navigate('/account/board/write');
+    }
+
     return (
         <div>
             <h2 className="page-main-title">계정관리</h2>
@@ -39,8 +49,9 @@ const AccountMainPage = () => {
                 <Pagination/>
             </div>
             
-            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '50px'}}>
-                <Button variant="primary" size="large">등록</Button>
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '50px', gap:'20px'}}>
+                <Button variant="primary" size="large" onClick={handleWriteClick}>등록</Button>
+                <Button variant="secondary" size="large" onClick={handleModifyClick}>수정</Button>
             </div>
         </div>
     );

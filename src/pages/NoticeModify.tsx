@@ -6,6 +6,7 @@ import Input from '../components/common/Input/Input';
 import Button from '../components/common/Button/Button';
 import Textarea from '../components/common/Textarea/Textarea'; 
 import FileUploader from '../components/common/FileUploader/FileUploader';
+import { useNavigate } from 'react-router-dom';
 
 const NoticeModify = () => {
     const authorName = "홍길동";
@@ -16,12 +17,18 @@ const NoticeModify = () => {
         { id: 3, name: '상품_가입_신청서_양식.docx' },
     ];
 
+    const navigate = useNavigate();
+
+    const goToListPage = () => {
+            navigate('/account/board/');
+        };
+
     return (
         <div>
             <h2 className="page-main-title">계정관리</h2>
             
             <div className="content-panel">
-                <PageTitle title="게시판 등록" />
+                <PageTitle title="게시판 수정" />
                 
                 <Table>
                     <tbody>
@@ -89,9 +96,9 @@ const NoticeModify = () => {
             </div>
             
             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '50px', gap: '20px'}}>
-                <Button variant="primary" size="large">저장</Button>
-                <Button variant="secondary" size="large">목록</Button>
-                <Button variant="neutral" size="large">삭제</Button>
+                <Button variant="primary" size="large" onClick={goToListPage}>저장</Button>
+                <Button variant="secondary" size="large" onClick={goToListPage}>목록</Button>
+                <Button variant="neutral" size="large" onClick={goToListPage}>삭제</Button>
             </div>
         </div>
     );

@@ -8,6 +8,10 @@ import AccountModify from './pages/AccountModify';
 import AccountSubWrite from './pages/AccountSubWrite';
 import AccountSubModify from './pages/AccountSubModify';
 import AccountSubList from './pages/AccountSubList';
+import NoticeList from './pages/NoticeList';
+import NoticeModify from './pages/NoticeModify';
+import NoticeWrite from './pages/NoticeWrite';
+
 function App() {
   return (
     <Routes>
@@ -17,12 +21,10 @@ function App() {
         path="/main" 
         element={<Layout mainClassName="bgcFFF"><MainPage /></Layout>} 
       />
-
       <Route 
         path="/account/main" 
         element={<Layout><AccountList /></Layout>} 
       />
-
       <Route 
         path="/account/modify" 
         element={<Layout><AccountModify /></Layout>} 
@@ -32,7 +34,6 @@ function App() {
         path="/account/sub" 
         element={<Layout><AccountSubList /></Layout>} 
       />
-
       <Route 
         path="/account/sub/modify" 
         element={<Layout><AccountSubModify /></Layout>} 
@@ -40,6 +41,19 @@ function App() {
       <Route 
         path="/account/sub/write" 
         element={<Layout><AccountSubWrite /></Layout>} 
+      />
+
+      <Route 
+        path="/account/board" 
+        element={<Layout><NoticeList /></Layout>} 
+      />
+      <Route 
+        path="/account/board/write" 
+        element={<Layout><NoticeWrite /></Layout>} 
+      />
+      <Route 
+        path="/account/board/modify" 
+        element={<Layout><NoticeModify /></Layout>} 
       />
     </Routes>
   );

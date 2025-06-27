@@ -10,7 +10,7 @@ const MENU = [
 
   {
     name: "메뉴관리",
-    children: [{ name: "메뉴관리", path: "/menu" }],
+    children: [{ name: "메뉴관리", path: "/menu/1dep" }],
   },
 ];
 

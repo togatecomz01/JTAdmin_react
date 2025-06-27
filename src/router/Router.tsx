@@ -12,6 +12,10 @@ import NoticeListWrite from "../pages/NoticeListWrite";
 import Login from "../pages/Login/Login";
 import NoticeListModify from "../pages/NoticeListModify";
 import Menu from "../pages/Menu";
+import Menu2dep from "../pages/Menu2dep";
+import Menu3dep from "../pages/Menu3dep";
+import Menu4dep from "../pages/Menu4dep";
+import Menu1dep from "../pages/Menu1dep";
 
 const Router = () => {
   return (
@@ -33,7 +37,12 @@ const Router = () => {
             path="/account/noticelist/modify"
             element={<NoticeListModify />}
           />
-          <Route path="/menu" element={<Menu />} />
+          <Route path="/menu" element={<Menu />}>
+            <Route path="1dep" element={<Menu1dep />} />
+            <Route path="2dep" element={<Menu2dep />} />
+            <Route path="3dep" element={<Menu3dep />} />
+            <Route path="4dep" element={<Menu4dep />} />
+          </Route>
         </Route>
 
         <Route path="/login" element={<Login />} />

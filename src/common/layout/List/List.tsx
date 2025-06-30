@@ -48,7 +48,7 @@ function List({
       {/* 페이지네이션 버튼 */}
       {listItems.length > itemsPerPage && (
         <div className={styles.pagination}>
-          <img src={arrow} />
+          <button className="prev">이전</button>
           {Array.from({ length: totalPages }).map((_, i) => (
             <button
               key={i}

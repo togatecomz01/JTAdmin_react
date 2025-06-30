@@ -8,12 +8,13 @@ function Header() {
     <div className={styles.header}>
       <div className={styles.userInfo}>
         <div className={styles.imageWrapper}>
-          <img src={userIcon} alt="User Icon" />
+          <img src={userIcon} alt="" />
+          <div className={styles.image}></div>
         </div>
         <div>
           <strong>{NAME}</strong> 님
         </div>
-        <Link to="/login">로그인</Link>
+        <Link to="/login">로그아웃</Link>
       </div>
     </div>
   );

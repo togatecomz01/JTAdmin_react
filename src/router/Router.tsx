@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import Layout from "../common/layout/Layout";
 import Home from "../pages/Home/Home";
 import AccountList from "../pages/AccountList";
@@ -19,7 +19,7 @@ import Menu1dep from "../pages/Menu1dep";
 
 const Router = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
@@ -47,7 +47,7 @@ const Router = () => {
 
         <Route path="/login" element={<Login />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

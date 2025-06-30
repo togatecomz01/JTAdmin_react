@@ -2,7 +2,7 @@
 
 .tableWrapper {
     margin-top: 20px;
-    width: 100%; // 바꿔주기
+    width: 100%;
     border: 1px solid $border-primary;
     border-radius: $border-radius-second;
     background-color: $background-component;
@@ -13,13 +13,46 @@
 .table {
     width: 100%;
     border-collapse: collapse;
-    tbody tr:last-child {
-        th, td {
-        border-bottom: none;
-        }
-    }
 }
 
 .fixedLayout {
     table-layout: fixed;
+}
+
+.tableHeaderRow {
+    th {
+        padding: 12px 15px;
+        text-align: center;
+        font-weight: $font-weight-bold;
+        background-color: $background-main;
+        border-bottom: 1px solid $border-primary;
+        border-right: 1px solid $border-primary;
+        vertical-align: middle;
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+}
+
+.dataRow {
+    &:hover {
+        background-color: lighten($background-main, 2%);
+    }
+
+    td {
+        padding: 12px 15px;
+        border-bottom: 1px solid $border-primary;
+        border-right: 1px solid $border-primary;
+        text-align: center;
+        vertical-align: middle;
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
 }

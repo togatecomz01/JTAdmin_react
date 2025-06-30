@@ -29,24 +29,14 @@
   margin-left: auto;
 }
 
-.imageWrapper {
-  width: 3%;
-  aspect-ratio: auto 1/1;
-  border-radius: 100%;
-  border: vars.$border;
-  overflow: hidden;
-  position: relative;
-
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
 .image {
+  width: 40px;
+  aspect-ratio: auto 1/1;
+
   background-image: url("../../../assets/images/user-icon.svg");
-  background-size: 80%;
-  background-position: center;
-  width: 80%;
-  height: auto;
-  display: block;
+  background-size: 90%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: vars.$border;
 }

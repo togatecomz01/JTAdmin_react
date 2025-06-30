@@ -1,7 +1,6 @@
 import Button from "../../common/Button/Button";
 import Input from "../../common/Input/Input";
 import styles from "./Login.module.scss";
-import logo from "../../assets/images/logo_color.png";
 
 const Login = () => {
   return (
@@ -9,7 +8,7 @@ const Login = () => {
       <div className={styles.circle1}></div>
       <div className={styles.login}>
         <div className={styles.introWrapper}>
-          <img src={logo} />
+          <div className={styles.logo}></div>
           <div>안녕하세요, JT저축은행 관리자 홈페이지입니다.</div>
         </div>
         <div className={styles.inputWrapper}>

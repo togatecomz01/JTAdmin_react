@@ -24,10 +24,13 @@
     height: 10%;
     @include mixin.flex-center;
 
-    img {
+    .image {
       width: 70%;
-      height: auto;
-      margin: 0 5%;
+      aspect-ratio: 1/1;
+      background-image: url("../../../assets/images/logo_fff.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
     }
   }
 }

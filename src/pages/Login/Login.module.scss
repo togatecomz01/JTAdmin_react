@@ -55,6 +55,15 @@ $gradient-color: linear-gradient(90deg, #5a8fff, #b0efe2);
   color: vars.$mid-color;
 }
 
+.logo {
+  width: 100%;
+  aspect-ratio: 4/1;
+  background-image: url("../../assets/images/logo_color.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .inputWrapper {
   @include align-center;
   gap: 0.5rem;

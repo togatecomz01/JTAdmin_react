@@ -1,5 +1,4 @@
 import styles from "./Input.module.scss";
-import search from "../../assets/images/search.svg";
 
 type InputProps = {
   type: string;
@@ -40,10 +39,10 @@ const Input = ({
   if (type === "search")
     return (
       <div className={styles.searchBarWrapper}>
-        <form className={styles.searchBar}>
+        <form>
           <input type={type} id="user-search" />
           <button>
-            <img src={search} />
+            <div className={styles.image}></div>
           </button>
         </form>
       </div>

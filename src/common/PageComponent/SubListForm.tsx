@@ -30,7 +30,7 @@ const SubListForm = ({ mode }: { mode: "write" | "modify" }) => {
         <Link to="/account/sublist">
           <Button name="목록" />
         </Link>
-        {isModify && <Button name="삭제" />}{" "}
+        {isModify && <Button name="삭제" />}
       </ButtonContainer>
     </Container>
   );

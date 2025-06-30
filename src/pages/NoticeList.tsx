@@ -33,7 +33,7 @@ const AccountMainPage = () => {
                 <TableHeader columns={NoticeListColumns} />
                     <tbody>
                         {NoticeList.map((post: BoardPost) => (
-                        <TableDataItem key={post.no}>
+                        <TableDataItem key={post.no}> {/* 생각해보니 이렇게 만든 이유가 tablerow는 tr안에 th,td 같이 있고 라벨이랑 구분이 되있어서 tableheader쓰면 이렇게 해야할 수 밖에 없음 (테이블을 어떻게 수정할지 고려해봐야할듯) */}
                             <td>{post.title}</td>
                             <td>{post.postDate}</td>
                             <td>{post.baseDate}</td>

@@ -24,22 +24,22 @@ const Router = () => {
     <HashRouter>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/account/list" element={<AccountList />} />
-          <Route path="/account/list/modify" element={<AccountListModify />} />
-          <Route path="/account/sublist" element={<SubList />} />
-          <Route path="/account/sublist/write" element={<SubListWrite />} />
-          <Route path="/account/sublist/modify" element={<SubListModify />} />
-          <Route path="/account/noticelist" element={<NoticeList />} />
+          <Route path="" element={<Home />} />
+          <Route path="account/list" element={<AccountList />} />
+          <Route path="account/list/modify" element={<AccountListModify />} />
+          <Route path="account/sublist" element={<SubList />} />
+          <Route path="account/sublist/write" element={<SubListWrite />} />
+          <Route path="account/sublist/modify" element={<SubListModify />} />
+          <Route path="account/noticelist" element={<NoticeList />} />
           <Route
-            path="/account/noticelist/write"
+            path="account/noticelist/write"
             element={<NoticeListWrite />}
           />
           <Route
-            path="/account/noticelist/modify"
+            path="account/noticelist/modify"
             element={<NoticeListModify />}
           />
-          <Route path="/menu" element={<Menu />}>
+          <Route path="menu" element={<Menu />}>
             <Route path="1dep" element={<Menu1dep />} />
             <Route path="2dep" element={<Menu2dep />} />
             <Route path="3dep" element={<Menu3dep />} />
@@ -47,7 +47,7 @@ const Router = () => {
           </Route>
         </Route>
 
-        <Route path="/login" element={<Login />} />
+        <Route path="login" element={<Login />} />
       </Routes>
     </HashRouter>
   );

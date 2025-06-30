@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./List.module.scss";
-import arrow from "../../../assets/images/arrow.svg";
+import PaginationButton from "./PaginationButton/PaginationButton";
 
 function List({
   headers,
@@ -47,19 +47,11 @@ function List({
 
       {/* 페이지네이션 버튼 */}
       {listItems.length > itemsPerPage && (
-        <div className={styles.pagination}>
-          <button className="prev">이전</button>
-          {Array.from({ length: totalPages }).map((_, i) => (
-            <button
-              key={i}
-              className={i + 1 === currentPage ? styles.activePage : ""}
-              onClick={() => setCurrentPage(i + 1)}
-            >
-              {i + 1}
-            </button>
-          ))}
-          <img src={arrow} />
-        </div>
+        <PaginationButton
+          totalPages={totalPages}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+        />
       )}
     </>
   );

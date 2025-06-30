@@ -46,35 +46,3 @@
     }
   }
 }
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
-
-  button {
-    padding: 0.4rem 0.8rem;
-    cursor: pointer;
-    font-size: large;
-
-    &:hover {
-      background: #ddd;
-    }
-  }
-
-  .activePage {
-    text-decoration: underline;
-  }
-
-  img {
-    width: 2%;
-    filter: brightness(80%);
-  }
-  img:first-child {
-    transform: rotate(90deg);
-  }
-  img:last-child {
-    transform: rotate(-90deg);
-  }
-}

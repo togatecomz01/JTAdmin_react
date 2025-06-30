@@ -10,13 +10,15 @@
 .Lnb {
   grid-area: LNB;
   height: 100%;
+  width: 20%;
+
   background: vars.$primary-color;
   color: vars.$white-color;
-  position: fixed;
-  width: 20%;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
+  position: fixed;
+  z-index: 1;
 
   .Logo {
     height: 10%;

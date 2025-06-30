@@ -19,15 +19,14 @@ const SubListModify = () => {
       <ButtonContainer>
         <Button
           name="저장"
-          color="primary"
           onClick={() =>
             openPopup({ message: "저장되었습니다", button: "확인" })
           }
         />
         <Link to="/account/sublist">
-          <Button name="목록" color="disabled" />
+          <Button name="목록" />
         </Link>
-        <Button name="삭제" color="cancel" />
+        <Button name="삭제" />
       </ButtonContainer>
     </Container>
   );

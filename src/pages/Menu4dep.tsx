@@ -45,7 +45,6 @@ const Menu4dep = () => {
       <ButtonContainer>
         <Button
           name="저장"
-          color="primary"
           onClick={() =>
             openPopup({ message: "저장되었습니다", button: "확인" })
           }

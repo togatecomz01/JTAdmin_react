@@ -20,7 +20,7 @@ const NoticeList = () => {
           <Button name="등록" />
         </Link>
         <Link to="/account/noticelist/modify">
-          <Button name="수정" color="disabled" />
+          <Button name="수정" />
         </Link>
       </ButtonContainer>
     </Container>

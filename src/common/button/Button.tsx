@@ -2,15 +2,20 @@ import styles from "./Button.module.scss";
 
 type ButtonProps = {
   name: string;
-  color?: "primary" | "disabled" | "cancel";
   onClick?: () => void;
   className?: string;
 };
 
-function Button({ name, color = "primary", onClick, className }: ButtonProps) {
+function Button({ name, onClick, className }: ButtonProps) {
+  const resolvedColor = () => {
+    if (name === "목록" || name === "수정") return "disabled";
+    if (name === "취소" || name === "삭제") return "cancel";
+    return "primary";
+  };
+
   return (
     <button
-      className={`${styles.button} ${styles[color]} ${className}`}
+      className={`${styles.button} ${styles[resolvedColor()]} ${className}`}
       onClick={onClick}
     >
       {name}

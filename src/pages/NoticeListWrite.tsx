@@ -19,15 +19,14 @@ const NoticeListWrite = () => {
       <ButtonContainer>
         <Button
           name="등록"
-          color="primary"
           onClick={() =>
             openPopup({ message: "저장되었습니다", button: "확인" })
           }
         />
         <Link to="/account/noticelist">
-          <Button name="목록" color="disabled" />
+          <Button name="목록" />
         </Link>
-        <Button name="취소" color="cancel" />
+        <Button name="취소" />
       </ButtonContainer>
     </Container>
   );

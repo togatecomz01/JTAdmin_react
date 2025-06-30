@@ -41,13 +41,13 @@ function LNB() {
               }`}
             >
               {menu.children.map((child) => (
-                <a
+                <Link
                   key={child.name}
-                  href={child.path}
+                  to={child.path}
                   className={styles.SubMenuItem}
                 >
                   {child.name}
-                </a>
+                </Link>
               ))}
             </ul>
           </div>

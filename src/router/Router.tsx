@@ -18,8 +18,6 @@ import Menu4dep from "../pages/Menu4dep";
 import Menu1dep from "../pages/Menu1dep";
 
 const Router = () => {
-  console.log("현재 주소:", location.href);
-  console.log("해시:", location.hash);
   return (
     <HashRouter>
       <Routes>

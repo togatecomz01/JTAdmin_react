@@ -1,7 +1,5 @@
-// src/pages/LayoutTest.tsx
-
 import React, { useState } from 'react';
-// 1. 필요한 모든 UI 부품들을 import 합니다.
+
 import PageTitle from '../components/common/PageTitle/PageTitle';
 import SearchInput from '../components/common/Searchinput/Searchinput';
 import Table from '../components/common/Table/Table';

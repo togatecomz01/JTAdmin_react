@@ -1,29 +1,6 @@
-/* @import '../../../styles/variables.scss';
-
-.titleWrapper {
-    position: relative;
-    font-size: $font-size-xlarge;
-    font-weight: $font-weight-bold;
-    padding-left: 20px;
-    margin-top: 13px;
-    margin-bottom: 20px;
-
-    &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 4px;
-        height: 20px;
-        background-color: $primary-color;
-    }
-} */
-
-/* src/components/common/PageTitle/PageTitle.module.scss (수정 후) */
 @import '../../../styles/variables.scss';
 
-// 1. 전체를 감싸는 flex 컨테이너
+//컨테이너
 .titleWrapper {
     display: flex;
     justify-content: space-between;
@@ -31,7 +8,7 @@
     margin-bottom: 20px;
 }
 
-// 2. 왼쪽 제목 부분 (파란색 바)
+//왼쪽부분
 .title {
     position: relative;
     font-size: 20px; // 약간 작게 조정
@@ -50,7 +27,7 @@
     }
 }
 
-// 3. 오른쪽 컨트롤(children) 영역
+// 오른쪽 영역
 .controls {
     display: flex;
     align-items: center;

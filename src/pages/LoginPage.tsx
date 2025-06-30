@@ -1,8 +1,6 @@
-// src/pages/LoginPage.tsx
-
 import React from 'react';
 import styles from './LoginPage.module.scss';
-import LogoImage from '../components/common/img/logo_color.png'; // 컬러 로고 이미지 경로 확인
+import LogoImage from '../components/common/img/logo_color.png';
 import Input from '../components/common/Input/Input';
 import Button from '../components/common/Button/Button';
 import { useNavigate } from 'react-router-dom';
@@ -10,9 +8,9 @@ const LoginPage = () => {
     const navigate = useNavigate();
 
     const handleLogin = (event: React.MouseEvent<HTMLButtonElement>) => {
-        event.preventDefault(); // form의 기본 동작(새로고침)을 막습니다.
+        event.preventDefault();
         console.log('로그인 시도...');
-        // 4. navigate 함수를 사용해서 '/main' 경로로 이동시킵니다.
+        //navigate사용해서 '/main' 경로로 이동
         navigate('/main');
     };
 

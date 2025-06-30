@@ -2,7 +2,7 @@
 import React from 'react';
 import styles from './MainPage.module.scss';
 import PageTitle from '../components/common/PageTitle/PageTitle';
-import WelcomeImage from '../components/common/img/bg_main.png'; // 경로 확인
+import WelcomeImage from '../components/common/img/bg_main.png';
 
 const MainPage = () => {
     const userName = "홍길동";

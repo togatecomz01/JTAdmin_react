@@ -11,6 +11,7 @@ import AccountSubList from './pages/AccountSubList';
 import NoticeList from './pages/NoticeList';
 import NoticeModify from './pages/NoticeModify';
 import NoticeWrite from './pages/NoticeWrite';
+import MenuManagement from './pages/MenuManagement'; 
 
 function App() {
   return (
@@ -54,6 +55,11 @@ function App() {
       <Route 
         path="/account/board/modify" 
         element={<Layout><NoticeModify /></Layout>} 
+      />
+
+      <Route 
+        path="/menu/menu" 
+        element={<Layout><MenuManagement /></Layout>} 
       />
     </Routes>
   );

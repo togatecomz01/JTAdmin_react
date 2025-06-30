@@ -39,7 +39,7 @@ const Menu2dep = () => {
 
   return (
     <>
-      <Wrapper subTitle={"메뉴 관리 > 메뉴 > 대출"}>
+      <Wrapper subTitle={"메뉴 > 대출"}>
         <List headers={HEADERS} listItems={LIST_ITEMS} />
       </Wrapper>
 

@@ -55,7 +55,7 @@ const Menu3dep = () => {
 
   return (
     <>
-      <Wrapper subTitle={"메뉴 관리 > 메뉴 > 대출 > 대출상품"}>
+      <Wrapper subTitle={"메뉴 > 대출 > 대출상품"}>
         <List headers={HEADERS} listItems={LIST_ITEMS} />
       </Wrapper>
 

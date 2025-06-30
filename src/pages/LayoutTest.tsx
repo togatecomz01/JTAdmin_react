@@ -23,8 +23,6 @@ const LayoutTest = () => {
     };
 
     return (
-        // 2. ✨ 핵심: 페이지의 모든 내용을 이 하나의 'content-panel' div로 감쌉니다.
-        //    이 div가 바로 '흰색 배경'을 가진 전체 컨테이너가 됩니다.
         <div className="content-panel">
             <PageTitle title="부관리자 등록"/>
                 <div className="control-panel">
@@ -38,7 +36,7 @@ const LayoutTest = () => {
                     <SearchInput placeholder="검색" />
                     </div>
                 </div>
-            {/* 4. 메인 테이블 (검색 조건 폼) */}
+            {/*메인 테이블*/}
             <Table>
                 <tbody>
                 <TableRow label="ID">
@@ -81,7 +79,6 @@ const LayoutTest = () => {
                 </tbody>
             </Table>
             
-            {/* 5. 페이지네이션도 content-panel 안으로 이동 */}
             <Pagination />
             
         </div>

@@ -16,7 +16,7 @@ const NEXT_PATH_NAME: { [key: number]: string } = {
 
 const MenuManagement = () => {
     const [depth, setDepth] = useState(1);
-    const [path, setPath] = useState<string[]>(['메뉴관리 > 메뉴']);//초기 경로
+    const [path, setPath] = useState<string[]>(['메뉴관리 > 메뉴']); //초기 경로
 
     const handleGoToNextDepth = () => {
         if (depth < 4) {

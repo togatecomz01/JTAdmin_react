@@ -1,6 +1,6 @@
-import Button from "../../common/Button/Button";
 import Input from "../../common/Input/Input";
 import styles from "./Login.module.scss";
+import LoginButton from "./LoginButton/LoginButton";
 
 const Login = () => {
   return (
@@ -21,7 +21,7 @@ const Login = () => {
           <div>아이디 또는 비밀번호가 잘못 입력되었습니다.</div>
         </div>
         <div className={styles.buttonWrapper}>
-          <Button name="로그인" className={styles.button} />
+          <LoginButton />
           <div>
             ※ 아이디 / 비밀번호를 분실했을 경우 전산팀으로 연락하시기 바랍니다.
           </div>

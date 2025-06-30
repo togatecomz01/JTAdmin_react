@@ -22,12 +22,11 @@
   left: $left;
   transform: translate(-50%, -50%);
 }
-$gradient-color: linear-gradient(90deg, #5a8fff, #b0efe2);
 
 .wrapper {
   @include align-center();
   gap: 4rem;
-  background-image: $gradient-color;
+  background-image: vars.$gradient-color;
 
   width: 100vw;
   height: 100vh;
@@ -90,11 +89,6 @@ $gradient-color: linear-gradient(90deg, #5a8fff, #b0efe2);
   width: 70%;
 
   color: vars.$mid-color;
-}
-
-.button {
-  width: 100%;
-  background-image: $gradient-color;
 }
 
 .circle1 {

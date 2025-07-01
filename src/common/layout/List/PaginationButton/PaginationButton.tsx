@@ -13,13 +13,15 @@ const PaginationButton = ({
 }: PaginationProps) => {
   return (
     <div className={styles.pagination}>
-      {currentPage > 1 && (
+      {currentPage > 1 ? (
         <button
           className={styles.prev}
           onClick={() => setCurrentPage(currentPage - 1)}
         >
           이전
         </button>
+      ) : (
+        <div className={styles.prev}></div>
       )}
       {Array.from({ length: totalPages }).map((_, i) => (
         <button
@@ -30,13 +32,15 @@ const PaginationButton = ({
           {i + 1}
         </button>
       ))}
-      {currentPage < totalPages && (
+      {currentPage < totalPages ? (
         <button
           className={styles.next}
           onClick={() => setCurrentPage(currentPage + 1)}
         >
           다음
         </button>
+      ) : (
+        <div className={styles.prev}></div>
       )}
     </div>
   );

@@ -195,10 +195,17 @@ export const ACCOUNT_MENU_NOTICE_MODIFY = [
     title: "첨부파일명",
     type: "constant",
     constant: (
-      <>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "1rem",
+        }}
+      >
         <span>보이스피싱_사기예방_안내문.hwp</span>
         <Button name="삭제" />
-      </>
+      </div>
     ),
   },
   {

@@ -6,7 +6,7 @@ function List({
   headers,
   listItems,
 }: {
-  headers: { text: string; value: string }[];
+  headers: { text: string; value: string; className?: string }[];
   listItems: Record<string, string | React.ReactNode>[];
 }) {
   const headerKey = headers.map((header) => header.value);
@@ -25,7 +25,7 @@ function List({
         <thead>
           <tr>
             {headers.map((header) => (
-              <th key={header.text}>
+              <th key={header.text} className={styles[`${header.className}`]}>
                 {header.text} {/* 컬럼명 바인딩 */}
               </th>
             ))}

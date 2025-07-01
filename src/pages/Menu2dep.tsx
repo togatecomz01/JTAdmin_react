@@ -7,9 +7,9 @@ import List from "../common/layout/List/List";
 import Input from "../common/Input/Input";
 
 const HEADERS = [
-  { text: "순서", value: "order" },
+  { text: "순서", value: "order", className: "narrow" },
   { text: "메뉴명", value: "menuTag" },
-  { text: "하위메뉴변경", value: "changeSubmenu" },
+  { text: "하위메뉴변경", value: "changeSubmenu", className: "middle" },
 ];
 
 const LIST_ITEMS = [

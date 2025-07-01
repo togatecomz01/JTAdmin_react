@@ -4,6 +4,7 @@ import FormTable from '../components/common/Table/FormTable';
 import Button from '../components/common/Button/Button';
 import { useNavigate } from 'react-router-dom';
 import { getNoticeModifyFormFields } from '../components/common/Table/TableData';
+import NoticeImage from '../components/common/img/icon_info.png';
 
 const NoticeModify = () => {
     const navigate = useNavigate();
@@ -25,6 +26,7 @@ const NoticeModify = () => {
             <div className="content-panel">
                 <PageTitle title="게시판 수정" />
                 <FormTable fields={formFields} />
+                <img src={NoticeImage} alt="" style={{marginTop: '5px'}}/> gdgdg
             </div>
             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '50px', gap: '20px'}}>
                 <Button variant="primary" size="large" onClick={goToListPage}>저장</Button>
@@ -35,3 +37,4 @@ const NoticeModify = () => {
     );
 };
 export default NoticeModify;
+

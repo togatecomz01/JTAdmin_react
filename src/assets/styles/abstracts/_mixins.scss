@@ -3,3 +3,8 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin items-wrapper {
+  display: flex;
+  gap: 2rem;
+}

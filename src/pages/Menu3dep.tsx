@@ -5,6 +5,7 @@ import Wrapper from "../common/layout/Wrapper/Wrapper";
 import { usePopup } from "../contexts/PopupContext";
 import List from "../common/layout/List/List";
 import Input from "../common/Input/Input";
+import RadioInput from "../common/RadioInput/RadioInput";
 
 const HEADERS = [
   { text: "순서", value: "order", className: "narrow" },
@@ -19,7 +20,7 @@ const LIST_ITEMS = [
     order: <Input type={"text"} />,
     menuTag: <Input type={"text"} />,
     url: <Input type={"text"} />,
-    active: <Input type={"radio"} items={["예", "아니요"]} />,
+    active: <RadioInput items={["예", "아니요"]} name={"listItem1"} />,
     changeSubmenu: (
       <Link to="/menu/4dep">
         <Button name="바로가기" fullWidth />
@@ -30,7 +31,7 @@ const LIST_ITEMS = [
     order: <Input type={"text"} />,
     menuTag: <Input type={"text"} />,
     url: <Input type={"text"} />,
-    active: <Input type={"radio"} items={["예", "아니요"]} />,
+    active: <RadioInput items={["예", "아니요"]} name={"listItem2"} />,
     changeSubmenu: (
       <Link to="/menu/4dep">
         <Button name="바로가기" fullWidth />
@@ -41,7 +42,7 @@ const LIST_ITEMS = [
     order: <Input type={"text"} />,
     menuTag: <Input type={"text"} />,
     url: <Input type={"text"} />,
-    active: <Input type={"radio"} items={["예", "아니요"]} />,
+    active: <RadioInput items={["예", "아니요"]} name={"listItem3"} />,
     changeSubmenu: (
       <Link to="/menu/4dep">
         <Button name="바로가기" fullWidth />

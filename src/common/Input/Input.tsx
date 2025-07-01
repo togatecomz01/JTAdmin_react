@@ -48,18 +48,6 @@ const Input = ({
       </div>
     );
 
-  if (type === "radio")
-    return (
-      <div className={styles.itemsWrapper}>
-        {items?.map((item) => (
-          <div className={styles.radio}>
-            <input type={type} name="radio" value={item} />
-            {item}
-          </div>
-        ))}
-      </div>
-    );
-
   return (
     <input
       className={`${styles.textInput} ${className || ""}`}

@@ -10,7 +10,7 @@ const AccountSubModify = () => {
     const goToListPage = () => navigate('/account/sub/');
 
     return (
-        <div>
+        <>
             <h2 className="page-main-title">부관리자</h2>
             <div className="content-panel">
                 <PageTitle title="부관리자 수정" />
@@ -20,7 +20,7 @@ const AccountSubModify = () => {
                 <Button variant="primary" size="large" onClick={goToListPage}>저장</Button>
                 <Button variant="secondary" size="large" onClick={goToListPage}>목록</Button>
             </div>
-        </div>
+        </>
     );
 };
 export default AccountSubModify;

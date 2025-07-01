@@ -75,45 +75,50 @@ const menuData: MenuItem[] = [
 
 const LNB = () => {
   //현재 활성화/열린 메뉴의 id를 저장할 state
-    const [activeMenu, setActiveMenu] = useState<string | null>('none');
+    const [activeMenu, setActiveMenu] = useState<string | null>(null);
 
     const handleMenuClick = (menuId: string) => {
-        //이미 열려있는 메뉴를 다시 클릭하면 닫고, 아니면 새로 연다.
+        //이미 열려있는 메뉴를 다시 클릭하면 닫고, 아니면 새로 열기위한 핸들러함수 제작
         setActiveMenu(prev => (prev === menuId ? null : menuId));
     };
 
     return (
         <aside className={styles.lnb}>
-        <h1 className={styles.logo}>
-            <Link to="/"><img src={LogoImage} alt="로고" /></Link>
-        </h1>
-        <ul className={styles.menuList}>
-            {menuData.map(menu => {
-            const isActive = activeMenu === menu.id;
-            return (
-                <li key={menu.id} className={isActive ? styles.active : ''}>
-                {/* 1-depth 메뉴 버튼 */}
-                <div className={styles.menuButton} onClick={() => handleMenuClick(menu.id)}>
-                    <p>{menu.name}</p>
-                    {menu.children && menu.children.length > 0 && (
-                        <span className={styles.arrowIcon}>
-                            <img src={Arrowicon} alt="메뉴 펼치기" />
-                        </span>
-                    )}
-                </div>
+            <h1 className={styles.logo}>
+                <Link to="/"><img src={LogoImage} alt="로고" /></Link>
+            </h1>
+            <ul className={styles.menuList}>
+                {menuData.map(menu => {
+                const isActive = activeMenu === menu.id;
+                return (
+                    <li key={menu.id} className={isActive ? styles.active : ''}>
+                        {/* 1-depth 메뉴 버튼 */}
+                        <div className={styles.menuButton} onClick={() => handleMenuClick(menu.id)}>
+                            <p>{menu.name}</p>
+                            {menu.children && menu.children.length > 0 && (
+                                <span className={styles.arrowIcon}>
+                                    <img src={Arrowicon} alt="메뉴 펼치기" />
+                                </span>
+                            )}
+                        </div>
 
-                {/* 2-depth 서브메뉴 */}
-                <div className={styles.subMenu}>
-                    {menu.children?.map(child => (
-                    <NavLink key={child.name} to={child.path || '#'}/*  end={false}  */className={({ isActive }) => isActive ? styles.activeLink : ""}>
-                        {child.name}
-                    </NavLink>
-                    ))}
-                </div>
-                </li>
-            );
-            })}
-        </ul>
+                        {/* 2-depth 서브메뉴 */}
+                        <div className={styles.subMenu} inert={!isActive}>
+                            {menu.children?.map(child => (
+                                <NavLink 
+                                    key={child.name} 
+                                    to={child.path || '#'}
+                                    tabIndex={!isActive ? -1 : 0}
+                                    className={({ isActive }) => isActive ? styles.activeLink : ""}
+                                >
+                                    {child.name}
+                                </NavLink>
+                                ))}
+                        </div>
+                    </li>
+                );
+                })}
+            </ul>
         </aside>
     );
 };

@@ -1,5 +1,3 @@
-// src/components/common/List/List.tsx (새 파일)
-
 import React from 'react';
 import PageTitle from '../PageTitle/PageTitle';
 

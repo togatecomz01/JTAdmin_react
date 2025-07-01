@@ -16,11 +16,11 @@ const NoticeModify = () => {
         { id: 2, name: '개인정보_처리방침_2024.pdf' },
     ];
 
-    // 함수호출 formFields생성
+    //함수호출 formFields생성ㄴ
     const formFields = getNoticeModifyFormFields(authorName, today, FileName);
 
     return (
-        <div>
+        <>
             <h2 className="page-main-title">계정관리</h2>
             <div className="content-panel">
                 <PageTitle title="게시판 수정" />
@@ -31,7 +31,7 @@ const NoticeModify = () => {
                 <Button variant="secondary" size="large" onClick={goToListPage}>목록</Button>
                 <Button variant="neutral" size="large" onClick={goToListPage}>삭제</Button>
             </div>
-        </div>
+        </>
     );
 };
 export default NoticeModify;

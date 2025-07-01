@@ -1,0 +1,59 @@
+@import '../../../styles/variables.scss';
+
+// 반투명 배경
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+//팝업 전체 컨테이너 스타일
+.popupBox {
+    background-color: $background-component;
+    border-radius: $border-radius-second;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 350px; 
+    min-height: 180px; 
+    display: flex;
+    flex-direction: column; 
+    overflow: hidden; 
+}
+
+//메시지
+.content {
+    flex-grow: 1;
+    padding: 60px 40px;
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+    color: $text-primary;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//버튼
+.actions {
+    width: 100%;
+    display: flex;
+
+    :global(.popup-button) {
+        flex: 1; 
+        height: 60px;
+        border: none;
+        border-radius: 0; 
+        border-top: 1px solid $border-primary;
+
+        // 두 개 이상의 버튼이 있을 때, 첫 번째 버튼 왼쪽에 구분선 추가, 거의 안생길듯 확인버튼만 있어서
+        &:not(:first-child) {
+            border-left: 1px solid $border-primary;
+        }
+    }
+}

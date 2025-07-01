@@ -18,7 +18,6 @@
     border-radius: $border-radius-second;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
-    
     display: flex;
     flex-direction: column;
     gap: 40px; // 각 섹션 사이의 간격
@@ -28,7 +27,7 @@
 .header {
     .logo {
         width: 200px;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
     p {
         color: $text-secondary;
@@ -55,8 +54,13 @@
         margin-top: 10px;
         font-size: $font-size-large;
         font-weight: $font-weight-bold;
-        background: linear-gradient(90deg, #5A8FFF, #B0EFE2);
+        background: linear-gradient(90deg, #5A8FFF, #B0EFE2); /* 여유되면 이런거 다 variables로 정리하기 */
         border: none;
+        
+        &:focus-visible {//접근성 위해 키보드로 포커싱 됐을 때만 주는 가상클래스
+        outline: 2px solid $text-primary; 
+        outline-offset: 2px;
+    }
     }
 }
 

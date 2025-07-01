@@ -15,7 +15,7 @@ const NoticeWrite = () => {
     const formFields = getNoticeWriteFormFields(authorName, today);
 
     return (
-        <div>
+        <>
             <h2 className="page-main-title">계정관리</h2>
             <div className="content-panel">
                 <PageTitle title="게시판 등록" />
@@ -26,7 +26,7 @@ const NoticeWrite = () => {
                 <Button variant="secondary" size="large" onClick={goToListPage}>목록</Button>
                 <Button variant="neutral" size="large" onClick={goToListPage}>취소</Button>
             </div>
-        </div>
+        </>
     );
 };
 export default NoticeWrite;

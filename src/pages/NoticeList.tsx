@@ -13,7 +13,7 @@ const NoticeList = () => {
     const handleModifyClick = () => navigate('/account/board/modify');
 
     return (
-        <div>
+        <>
             <h2 className="page-main-title">계정관리</h2>
             <div className="content-panel">
                 <List
@@ -27,7 +27,7 @@ const NoticeList = () => {
                 <Button variant="primary" size="large" onClick={handleWriteClick}>등록</Button>
                 <Button variant="secondary" size="large" onClick={handleModifyClick}>수정</Button>
             </div>
-        </div>
+        </>
     );
 };
 export default NoticeList;

@@ -11,7 +11,7 @@ const AccountModify = () => {
     const handleSave = () => goToList();
     
     return (
-        <div>
+        <>
             <h2 className="page-main-title">메인관리자</h2>
             <div className="content-panel">
                 <PageTitle title="관리자 설정" />
@@ -21,7 +21,7 @@ const AccountModify = () => {
                 <Button variant="primary" size="large" onClick={handleSave}>저장</Button>
                 <Button variant="secondary" size="large" onClick={goToList}>목록</Button>
             </div>
-        </div>
+        </>
     );
 };
 export default AccountModify;

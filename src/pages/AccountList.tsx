@@ -10,7 +10,7 @@ const AccountList = () => {
     const handleModifyClick = () => navigate('/account/modify');
 
     return (
-        <div>
+        <>
             <h2 className="page-main-title">계정관리</h2>
             <div className="content-panel">
                 <PageTitle title="메인관리자 목록" />
@@ -19,7 +19,7 @@ const AccountList = () => {
             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '50px' }}>
                 <Button variant="primary" size="large" onClick={handleModifyClick}>수정</Button>
             </div>
-        </div>
+        </>
     );
 };
 export default AccountList;

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PageTitle from '../components/common/PageTitle/PageTitle';
 import Table, { type ColumnDef } from '../components/common/Table/Table';
 import Input from '../components/common/Input/Input';
 import Radio from '../components/common/Radio/Radio';
 import Button from '../components/common/Button/Button';
-
+import Popup from '../components/common/Popup/Popup';
 const NEXT_PATH_NAME: { [key: number]: string } = {
     1: '대출',
     2: '대출상품',
@@ -19,6 +19,11 @@ const MenuManagement = () => {
     const [depth, setDepth] = useState(1);
     const [path, setPath] = useState<string[]>(['메뉴관리 > 메뉴']);
 
+    const dummyRowCount = depth < 2 ? 7 : (depth < 3 ? 2 : 5);
+    const tableData: MenuRowData[] = Array.from({ length: dummyRowCount }, (_, i) => ({ id: i }));
+
+    const [isPopupOpen, setIsPopupOpen] = useState(false);//popup 띄우기용 상태관리
+
     const handleGoToNextDepth = () => {
         if (depth < 4) {
             const newPathName = NEXT_PATH_NAME[depth];
@@ -26,6 +31,12 @@ const MenuManagement = () => {
             setPath(prevPath => [...prevPath, newPathName]);
         }
     };
+
+    useEffect(() => {//popup띄울 depth체크하는 useEffect, 일단 팝업을 띄울만한 조건이 4depth일 떄 하위메뉴 없다라는 것을 보여주기 위한 느낌으로 일단 첨부 
+            if (depth === 4) {
+                setIsPopupOpen(true);
+            }
+        }, [depth]);
 
     const columns: ColumnDef<MenuRowData>[] = [
         {
@@ -81,11 +92,9 @@ const MenuManagement = () => {
         });
     }
 
-    const dummyRowCount = depth < 2 ? 7 : (depth < 3 ? 2 : 5);
-    const tableData: MenuRowData[] = Array.from({ length: dummyRowCount }, (_, i) => ({ id: i }));
 
     return (
-        <div>
+        <>
             <h2 className="page-main-title">메뉴관리</h2>
             <div className="content-panel">
                 <PageTitle title={path.join(' > ')} />
@@ -98,7 +107,16 @@ const MenuManagement = () => {
             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '50px' }}>
                 <Button variant="primary" size="large">저장</Button>
             </div>
-        </div>
+            {isPopupOpen && (
+                <Popup
+                    isOpen={isPopupOpen}
+                    onClose={() => setIsPopupOpen(false)}
+                    actions={<Button variant="primary" className="popup-button" onClick={() => setIsPopupOpen(false)}>확인</Button>}
+                >
+                    관리하실 하위 메뉴가 존재하지 않습니다.
+                </Popup>
+            )}
+        </>
     );
 };
 

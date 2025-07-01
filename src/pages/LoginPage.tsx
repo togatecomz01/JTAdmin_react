@@ -15,7 +15,6 @@ const LoginPage = () => {
     };
 
     return (
-
         <div className={styles.loginPage}>
             <div className={styles.loginBox}>
                 <div className={styles.header}>
@@ -40,7 +39,6 @@ const LoginPage = () => {
                 <p className={styles.footerText}>
                     ※ 아이디 / 비밀번호를 분실했을 경우 전산팀으로 연락하시기 바랍니다.
                 </p>
-
             </div>
         </div>
     );

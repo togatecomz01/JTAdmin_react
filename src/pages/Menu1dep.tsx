@@ -18,7 +18,7 @@ const LIST_ITEMS = [
     menuTag: <Input type={"text"} />,
     changeSubmenu: (
       <Link to="/menu/2dep">
-        <Button name="바로가기" />
+        <Button name="바로가기" fullWidth />
       </Link>
     ),
   },
@@ -27,7 +27,7 @@ const LIST_ITEMS = [
     menuTag: <Input type={"text"} />,
     changeSubmenu: (
       <Link to="/menu/2dep">
-        <Button name="바로가기" />
+        <Button name="바로가기" fullWidth />
       </Link>
     ),
   },
@@ -36,7 +36,7 @@ const LIST_ITEMS = [
     menuTag: <Input type={"text"} />,
     changeSubmenu: (
       <Link to="/menu/2dep">
-        <Button name="바로가기" />
+        <Button name="바로가기" fullWidth />
       </Link>
     ),
   },

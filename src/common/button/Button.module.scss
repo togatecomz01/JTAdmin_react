@@ -3,7 +3,6 @@
 .button {
   width: 100px;
   height: 40px;
-  margin: 10px;
   border-radius: 10px;
   background-color: vars.$primary-color;
   color: white;
@@ -21,4 +20,8 @@
   background-color: white;
   border: 1px solid vars.$mid-color;
   color: vars.$mid-color;
+}
+
+.fullWidth {
+  width: 100%;
 }

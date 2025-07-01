@@ -22,7 +22,7 @@ const LIST_ITEMS = [
     active: <Input type={"radio"} items={["예", "아니요"]} />,
     changeSubmenu: (
       <Link to="/menu/4dep">
-        <Button name="바로가기" />
+        <Button name="바로가기" fullWidth />
       </Link>
     ),
   },
@@ -33,7 +33,7 @@ const LIST_ITEMS = [
     active: <Input type={"radio"} items={["예", "아니요"]} />,
     changeSubmenu: (
       <Link to="/menu/4dep">
-        <Button name="바로가기" />
+        <Button name="바로가기" fullWidth />
       </Link>
     ),
   },
@@ -44,7 +44,7 @@ const LIST_ITEMS = [
     active: <Input type={"radio"} items={["예", "아니요"]} />,
     changeSubmenu: (
       <Link to="/menu/4dep">
-        <Button name="바로가기" />
+        <Button name="바로가기" fullWidth />
       </Link>
     ),
   },

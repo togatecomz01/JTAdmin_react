@@ -18,19 +18,19 @@ const LIST_ITEMS = [
     menuTag: <Input type={"text"} />,
     changeSubmenu: (
       <Link to="/menu/3dep">
-        <Button name="바로가기" />
+        <Button name="바로가기" fullWidth />
       </Link>
     ),
   },
   {
     order: <Input type={"text"} />,
     menuTag: <Input type={"text"} />,
-    changeSubmenu: <Button name="바로가기" />,
+    changeSubmenu: <Button name="바로가기" fullWidth />,
   },
   {
     order: <Input type={"text"} />,
     menuTag: <Input type={"text"} />,
-    changeSubmenu: <Button name="바로가기" />,
+    changeSubmenu: <Button name="바로가기" fullWidth />,
   },
 ];
 

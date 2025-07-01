@@ -88,19 +88,23 @@ const LNB = () => {
                 <Link to="/"><img src={LogoImage} alt="로고" /></Link>
             </h1>
             <ul className={styles.menuList}>
-                {menuData.map(menu => {
-                const isActive = activeMenu === menu.id;
+                {menuData.map(menu => {const isActive = activeMenu === menu.id;
                 return (
-                    <li key={menu.id} className={isActive ? styles.active : ''}>
-                        {/* 1-depth 메뉴 버튼 */}
-                        <div className={styles.menuButton} onClick={() => handleMenuClick(menu.id)}>
-                            <p>{menu.name}</p>
-                            {menu.children && menu.children.length > 0 && (
-                                <span className={styles.arrowIcon}>
-                                    <img src={Arrowicon} alt="메뉴 펼치기" />
-                                </span>
-                            )}
-                        </div>
+                        <li key={menu.id} className={isActive ? styles.active : ''}>
+                            {/* 1. 1-depth 메뉴 버튼을 div 대신 button 태그로 변경합니다. */}
+                            <button 
+                                type="button" // form 안에서 submit되는 것을 방지
+                                className={styles.menuButton} 
+                                onClick={() => handleMenuClick(menu.id)}
+                                aria-expanded={isActive} // aria-expanded는 스크린 리더 사용자에게 메뉴가 열렸는지 닫혔는지 알려주는 중요한 접근성 속성입니다.
+                            >
+                                <p>{menu.name}</p>
+                                {menu.children && menu.children.length > 0 && (
+                                    <span className={styles.arrowIcon}>
+                                        <img src={Arrowicon} alt="메뉴 펼치기" />
+                                    </span>
+                                )}
+                            </button>
 
                         {/* 2-depth 서브메뉴 */}
                         <div className={styles.subMenu} inert={!isActive}>

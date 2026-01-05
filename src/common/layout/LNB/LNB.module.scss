@@ -3,7 +3,6 @@
 
 @mixin menu-item {
   display: grid;
-  padding: 5%;
   cursor: pointer;
 }
 
@@ -56,6 +55,7 @@
       &.SubMenuOpen {
         max-height: 500px; // 충분히 큰 값으로 설정 (내용에 따라 조정)
         opacity: 1;
+        background-color: vars.$dark-primary-color;
       }
     }
 
